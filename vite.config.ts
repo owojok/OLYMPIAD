@@ -2,7 +2,7 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// https://vite.dev/config/ - GitHub Pages Deploy Trigger
 export default defineConfig({
   plugins: [react()],
   base: './',
