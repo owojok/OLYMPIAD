@@ -1,0 +1,233 @@
+/* Global CSS and Design Tokens */
+
+:root {
+  /* Fonts */
+  --font-sans: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', monospace;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Light Theme Variables */
+:root[data-theme="light"] {
+  --bg-base: #f3f4f6;
+  --bg-surface: #ffffff;
+  --bg-panel: rgba(255, 255, 255, 0.75);
+  --bg-input: #f9fafb;
+  
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #9ca3af;
+  
+  --color-primary: #4f46e5;      /* Indigo */
+  --color-primary-hover: #4338ca;
+  --color-secondary: #db2777;    /* Pink */
+  --color-accent: #7c3aed;       /* Violet */
+  
+  --color-success: #059669;      /* Emerald */
+  --color-warning: #d97706;      /* Amber */
+  --color-danger: #dc2626;       /* Red */
+  --color-info: #2563eb;         /* Blue */
+
+  --color-success-bg: rgba(5, 150, 105, 0.1);
+  --color-warning-bg: rgba(217, 119, 6, 0.1);
+  --color-danger-bg: rgba(220, 38, 38, 0.1);
+  --color-info-bg: rgba(37, 99, 235, 0.1);
+
+  --border-color: rgba(0, 0, 0, 0.08);
+  --border-color-focus: rgba(79, 70, 229, 0.4);
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-premium: 0 8px 32px 0 rgba(31, 38, 135, 0.06);
+  --glass-blur: blur(12px);
+}
+
+/* Dark Theme Variables */
+:root[data-theme="dark"] {
+  --bg-base: #08090d;
+  --bg-surface: #10121a;
+  --bg-panel: rgba(16, 18, 26, 0.7);
+  --bg-input: #1a1c26;
+  
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  
+  --color-primary: #6366f1;      /* Indigo */
+  --color-primary-hover: #4f46e5;
+  --color-secondary: #ec4899;    /* Pink */
+  --color-accent: #8b5cf6;       /* Violet */
+  
+  --color-success: #10b981;      /* Emerald */
+  --color-warning: #f59e0b;      /* Amber */
+  --color-danger: #ef4444;       /* Red */
+  --color-info: #3b82f6;         /* Blue */
+
+  --color-success-bg: rgba(16, 185, 129, 0.12);
+  --color-warning-bg: rgba(245, 158, 11, 0.12);
+  --color-danger-bg: rgba(239, 68, 68, 0.12);
+  --color-info-bg: rgba(59, 130, 246, 0.12);
+
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-color-focus: rgba(99, 102, 241, 0.4);
+  
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+  --shadow-premium: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  --glass-blur: blur(16px);
+}
+
+/* Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-base);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
+  overflow-x: hidden;
+}
+
+/* Styled Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-base);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  color: var(--text-primary);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.25rem; }
+
+/* Global Layout Override for Vite Default #root */
+#root {
+  display: flex;
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  border: none;
+  background-color: var(--bg-base);
+  overflow: hidden;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: var(--bg-panel);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-premium);
+}
+
+.glass-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.glass-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-color-focus);
+}
+
+/* Micro-animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn var(--transition-normal) forwards;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.animate-scale-in {
+  animation: scaleIn var(--transition-normal) forwards;
+}
+
+/* Utilities */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-info {
+  background-color: var(--color-info-bg);
+  color: var(--color-info);
+}
+
+.badge-success {
+  background-color: var(--color-success-bg);
+  color: var(--color-success);
+}
+
+.badge-warning {
+  background-color: var(--color-warning-bg);
+  color: var(--color-warning);
+}
+
+.badge-danger {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger);
+}
+
+.badge-primary {
+  background-color: rgba(99, 102, 241, 0.1);
+  color: var(--color-primary);
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-sans);
+}

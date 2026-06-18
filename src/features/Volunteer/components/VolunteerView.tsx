@@ -1,0 +1,215 @@
+import React from 'react';
+import { VOLUNTEER_TRAINING } from '../../../data/eventData';
+import { useVolunteerChecklist } from '../hooks/useVolunteerChecklist';
+import type { useVolunteers } from '../hooks/useVolunteers';
+import { Clock, Award, CheckCircle, RefreshCcw, AlertCircle, ShieldAlert } from 'lucide-react';
+import './Volunteer.css';
+
+interface VolunteerViewProps {
+  volunteerHook: ReturnType<typeof useVolunteers>;
+}
+
+export const VolunteerView: React.FC<VolunteerViewProps> = ({ volunteerHook }) => {
+  const { completedSessions, toggleSession, progressPercent } = useVolunteerChecklist();
+  const { roles, totalVolunteers, updateRoleCount, resetRoles, validationError } = volunteerHook;
+
+  const getRatioStatus = () => {
+    if (totalVolunteers < 40) {
+      return {
+        badgeClass: 'badge-danger',
+        text: `Below Target: Current allocation is ~${Math.round(400 / (totalVolunteers || 1))}:1 ratio. Need ${40 - totalVolunteers} more to maintain standard 10:1 ratio.`
+      };
+    } else if (totalVolunteers === 40) {
+      return {
+        badgeClass: 'badge-success',
+        text: 'Optimal: Roster matches the target 10:1 student-to-volunteer ratio safety standards.'
+      };
+    } else {
+      return {
+        badgeClass: 'badge-info',
+        text: `Extended Coverage: Current roster of ${totalVolunteers} exceeds baseline requirement.`
+      };
+    }
+  };
+
+  const statusInfo = getRatioStatus();
+
+  return (
+    <div className="volunteer-container animate-fade-in">
+      <div className="volunteer-header glass-panel">
+        <h2 className="text-gradient">Volunteer Management Portal</h2>
+        <p className="subtitle">
+          Oversee volunteer distribution ratios (10:1 target ratio), training sessions, and shift schedules.
+        </p>
+
+        <div className="volunteer-quick-stats">
+          <div className="quick-stat-item">
+            <span className="label">Total Roster Count</span>
+            <span className="value">{totalVolunteers} Staff</span>
+          </div>
+          <div className="quick-stat-item">
+            <span className="label">Target Student Ratio</span>
+            <span className="value">10 : 1 (JSS/SSS)</span>
+          </div>
+          <div className="quick-stat-item">
+            <span className="label">Training Status</span>
+            <span className="value">{progressPercent}% Done</span>
+          </div>
+        </div>
+
+        <div className={`ratio-alert-banner ${statusInfo.badgeClass}`} style={{ marginTop: 16, display: 'flex', gap: 12, padding: 12, borderRadius: 8, alignItems: 'center' }}>
+          <ShieldAlert size={20} />
+          <span style={{ fontSize: '0.9rem', fontWeight: 600 }}>{statusInfo.text}</span>
+        </div>
+      </div>
+
+      <div className="volunteer-split-grid">
+        <div className="volunteer-roles-panel glass-panel">
+          <div className="panel-header-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
+            <h3>Volunteer Roles & Team Breakdown</h3>
+            <button className="btn btn-secondary btn-sm" onClick={resetRoles} title="Reset to original baseline">
+              <RefreshCcw size={14} /> Reset Baseline
+            </button>
+          </div>
+          <p className="panel-desc">Reallocate staff counts across teams. Changes persist locally.</p>
+          
+          {validationError && (
+            <div className="alert-box badge-danger" style={{ margin: '0 0 16px 0', padding: '10px 12px' }}>
+              <AlertCircle size={16} />
+              <span>{validationError}</span>
+            </div>
+          )}
+
+          <div className="roles-progress-list">
+            {roles.map((role) => {
+              // Calculate percent of total
+              const percent = totalVolunteers > 0 ? Math.round((role.count / totalVolunteers) * 100) : 0;
+              return (
+                <div key={role.name} className="role-progress-item">
+                  <div className="role-progress-labels">
+                    <span className="role-name">{role.name}</span>
+                    <div className="role-controls-wrapper" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                      <div className="role-adjust-controls">
+                        <button 
+                          className="btn-adjust" 
+                          onClick={() => updateRoleCount(role.name, String(Math.max(0, role.count - 1)))}
+                          title="Decrease"
+                        >
+                          -
+                        </button>
+                        <input 
+                          type="text" 
+                          value={role.count} 
+                          onChange={(e) => updateRoleCount(role.name, e.target.value)}
+                          className="role-input"
+                        />
+                        <button 
+                          className="btn-adjust" 
+                          onClick={() => updateRoleCount(role.name, String(role.count + 1))}
+                          title="Increase"
+                        >
+                          +
+                        </button>
+                      </div>
+                      <span className="role-count" style={{ width: '45px', textAlign: 'right' }}>({percent}%)</span>
+                    </div>
+                  </div>
+                  <div className="role-progress-bar-container">
+                    <div 
+                      className="role-progress-bar-fill" 
+                      style={{ width: `${percent}%` }}
+                    ></div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="volunteer-training-panel glass-panel">
+          <h3>Interactive Training Tracker</h3>
+          <p className="panel-desc">Click training sessions once completed. Toggles state in Local Storage.</p>
+          
+          <div className="training-overall-progress">
+            <div className="progress-bar-header">
+              <span>Overall Progress</span>
+              <span>{progressPercent}% Complete</span>
+            </div>
+            <div className="training-bar">
+              <div className="training-bar-fill" style={{ width: `${progressPercent}%` }}></div>
+            </div>
+          </div>
+
+          <div className="training-list">
+            {VOLUNTEER_TRAINING.map((session) => {
+              const isChecked = completedSessions.includes(session.id);
+              return (
+                <div 
+                  key={session.id} 
+                  className={`training-card-item glass-card ${isChecked ? 'completed' : ''}`}
+                  onClick={() => toggleSession(session.id)}
+                >
+                  <div className="checkbox-col">
+                    <div className={`custom-checkbox ${isChecked ? 'checked' : ''}`}>
+                      {isChecked && <CheckCircle size={16} />}
+                    </div>
+                  </div>
+                  <div className="training-info">
+                    <h4>{session.title}</h4>
+                    <p>{session.details}</p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div className="volunteer-shifts-panel glass-panel">
+        <h3>Shift & Roster Assignments</h3>
+        <p className="panel-desc">Roster splits between shifts to ensure continuous event coverage.</p>
+        
+        <div className="table-responsive">
+          <table className="shifts-table">
+            <thead>
+              <tr>
+                <th>Shift ID</th>
+                <th>Time Range</th>
+                <th>Focus Division</th>
+                <th>Coverage Allocation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Shift 1</strong></td>
+                <td><span className="shift-time"><Clock size={12} /> 7:00 am — 12:30 pm (Day 1)</span></td>
+                <td><span className="badge badge-info">Division B</span></td>
+                <td>Registration, welcome desk, biology/physics lab guides, morning catering</td>
+              </tr>
+              <tr>
+                <td><strong>Shift 2</strong></td>
+                <td><span className="shift-time"><Clock size={12} /> 12:00 pm — 5:00 pm (Day 1)</span></td>
+                <td><span className="badge badge-danger">Division C</span></td>
+                <td>Chemistry lab assistants, physics guides, vehicle workshop, venue sweep</td>
+              </tr>
+              <tr>
+                <td><strong>Shift 3</strong></td>
+                <td><span className="shift-time"><Clock size={12} /> 7:00 am — 2:00 pm (Day 2)</span></td>
+                <td><span className="badge badge-primary">Ceremony</span></td>
+                <td>VIP escorts, stage layout assistants, media support, venue restoration</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div className="shift-notes badge-info" style={{ marginTop: 16, display: 'flex', gap: 8, padding: 12, borderRadius: 8 }}>
+          <Award size={20} />
+          <div>
+            <strong> Roster Notes:</strong> 5 Core Overlap volunteers are assigned to work *both* shifts on Day 1 for continuous operational logic, while the remaining 35 volunteers are split evenly.
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+export default VolunteerView;

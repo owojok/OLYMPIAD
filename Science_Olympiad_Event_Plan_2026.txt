@@ -1,0 +1,1007 @@
+
+================================================================================
+    SCIENCE OLYMPIAD NIGERIA — PLATEAU STATE TOURNAMENT 2026
+    UNIVERSITY OF JOS · DIVISION B & C ONLY
+    COMPREHENSIVE EVENT PLAN — A-LIST PLANNER STANDARD
+================================================================================
+
+EVENT OVERVIEW
+--------------
+Dates:        2-Day Event (Dates TBD — suggest September/October 2026)
+Venue:        University of Jos
+              • Faculty of Veterinary Science (Labs & Classrooms)
+              • Faculty of Natural Sciences (Labs & Halls)
+Categories:   Division B (JSS) — Day 1 Morning
+              Division C (SSS) — Day 1 Afternoon
+Day 2:        Prize Giving & Closing Ceremony
+Theme:        Innovate Now
+Volunteer Ratio: 10 students : 2 volunteers (5:1 ratio)
+
+================================================================================
+SECTION 1: VENUE ALLOCATION & LAYOUT
+================================================================================
+
+FACULTY OF VETERINARY SCIENCE
+------------------------------
+Building A — Main Block:
+  • Ground Floor:
+    - Room VET-101: Registration & Accreditation Desk (Division B)
+    - Room VET-102: Registration & Accreditation Desk (Division C)
+    - Room VET-103: Volunteer Briefing Room / Command Center
+    - Room VET-104: Judges / Scorers Room (Secure)
+    - Room VET-105: First Aid Station
+    - Room VET-106: Media / ICT Room
+    - Corridor: Student Waiting Area (marked with tape)
+
+  • First Floor:
+    - Lab VET-201: Biology Lab — Division B: Anatomy & Physiology
+    - Lab VET-202: Biology Lab — Division B: Disease Detectives
+    - Lab VET-203: Biology Lab — Division C: Anatomy & Physiology
+    - Room VET-204: Supervisor Rest Area
+    - Room VET-205: Equipment Storage
+
+  • Second Floor:
+    - Lab VET-301: Chemistry Lab — Division C: Chemistry Lab Event
+    - Lab VET-302: Chemistry Prep Room
+    - Room VET-303: Results Compilation Room
+
+FACULTY OF NATURAL SCIENCES
+----------------------------
+Building B — Science Complex:
+  • Ground Floor:
+    - Room NAT-101: Registration Overflow / Late Arrivals
+    - Room NAT-102: Catering / Refreshment Station
+    - Room NAT-103: Security Office
+    - Room NAT-104: Lost & Found
+    - Hall NAT-H1: Assembly Hall / Opening Briefing (Division B)
+    - Hall NAT-H2: Assembly Hall / Opening Briefing (Division C)
+
+  • First Floor:
+    - Lab NAT-201: Physics Lab — Division B: Density Lab
+    - Lab NAT-202: Physics Lab — Division B: Thermodynamics
+    - Lab NAT-203: Physics Lab — Division C: Circuit Lab
+    - Lab NAT-204: Physics Lab — Division C: Solar Power
+    - Room NAT-205: Equipment Calibration Station
+
+  • Second Floor:
+    - Workshop NAT-301: Engineering Workshop — Division B: Battery Buggy
+    - Workshop NAT-302: Engineering Workshop — Division B: Mystery Architecture
+    - Workshop NAT-303: Engineering Workshop — Division C: Electric Vehicle
+    - Room NAT-304: Tools & Materials Storage
+
+  • Third Floor:
+    - Room NAT-401: Management Sciences — Division B: Dynamic Planet
+    - Room NAT-402: Management Sciences — Division C: Dynamic Planet
+    - Room NAT-403: Data Entry / Scoring Station
+    - Room NAT-404: VIP Meeting Room / Guest Reception
+
+EXTERNAL AREAS
+---------------
+  • Parking Lot A: School Buses / Staff Vehicles (Security manned)
+  • Parking Lot B: VIP / Guest Parking
+  • Walkway 1: Division B route (marked with BLUE tape/arrows)
+  • Walkway 2: Division C route (marked with RED tape/arrows)
+  • Assembly Point: Emergency evacuation zone (both divisions)
+  • Food Court: Outdoor refreshment area (tented)
+
+================================================================================
+SECTION 2: DETAILED RUN OF SHOW — DAY 1 (COMPETITION DAY)
+================================================================================
+
+PRE-EVENT (2 Days Before Event — Online Briefing)
+--------------------------------------------------
+Time:        5:00 pm — 6:00 pm
+Personnel:   Judges, Supervisors, Examiners, Technical Lead
+Location:    Google Meet (Online)
+
+  5:00 pm  ├─ Judges, supervisors & examiners orientation briefing
+           ├─ Scoring platform walkthrough & digital interface training
+           └─ Rules alignment & event-specific Q&A
+
+PRE-EVENT (Day Before — Setup Day)
+-----------------------------------
+Time:        2:00 pm — 6:00 pm
+Personnel:   Setup Team (20 volunteers), Technical Team, Venue Managers
+
+  2:00 pm  ├─ Venue access granted to setup team
+           ├─ Signage installation (directional arrows, room labels, banners)
+           ├─ Lab equipment testing & calibration
+           ├─ Furniture arrangement (desks, chairs, judging tables)
+           ├─ Audio-visual equipment setup in all halls
+           ├─ Wi-Fi/network testing in all rooms
+           ├─ First aid stations stocked
+           └─ Security walk-through
+
+  4:00 pm  ├─ Volunteer briefing & role assignment
+           ├─ Walk-through of all routes
+           ├─ Radio/communication device testing
+           ├─ Emergency procedure review
+           └─ Refreshment station setup
+
+  5:00 pm  ├─ Volunteer lead orientation briefing & route walk-through
+           ├─ Equipment final check in all competition rooms
+           └─ Photography of setup for reference
+
+  6:00 pm  ├─ Security lockdown
+           ├─ Final sweep of all venues
+           └─ Key handover to night security
+
+---
+
+DAY 1 — DIVISION B (JSS) COMPETITION
+-------------------------------------
+Date: [Insert Date]
+Theme: Innovate Now
+Duration: 3 hours (9:00 am — 12:00 pm)
+
+  7:00 am  ├─ CORE TEAM ARRIVAL
+           │   • Event Director
+           │   • Venue Coordinators (2)
+           │   • Security Lead
+           │   • Medical Officer
+           │   • ICT Lead
+           │   • Volunteer Coordinator
+           │
+           ├─ VENUE ACTIVATION
+           │   • All labs unlocked & lights on
+           │   • Audio systems tested
+           │   • Registration desks stocked with materials
+           │   • Refreshment stations operational
+           │   • Security posts manned
+           │   • Volunteer stations activated
+           │
+           └─ COMMUNICATION CHECK
+               • Radio check (all channels)
+               • WhatsApp group confirmation
+               • Emergency numbers verified
+
+  7:30 am  ├─ VOLUNTEER ARRIVAL & BRIEFING
+           │   • Sign-in at Command Center (VET-103)
+           │   • Badge & t-shirt distribution
+           │   • Final role confirmation
+           │   • Route familiarization
+           │   • Emergency protocol review
+           │   • Radio distribution
+           │
+           ├─ SUPERVISOR ARRIVAL
+           │   • Sign-in at Judges Room (VET-104)
+           │   • Equipment verification
+           │   • Scoring materials collection
+           │   • Lab-specific briefing
+           │
+           └─ CATERING TEAM ARRIVAL
+               • Water stations filled
+               • Snack packs prepared
+               • Lunch prep begins
+
+  8:00 am  ├─ FINAL SETUP CHECK
+           │   • Walk-through by Event Director
+           │   • Signage verification
+           │   • Restroom check (clean & stocked)
+           │   • Parking attendants in position
+           │   • First aid station confirmed
+           │   • Media/photography positions set
+           │
+           └─ SCHOOL LIAISON TEAM READY
+               • Contact list verified
+               • Bus arrival tracking begins
+               • Parking guidance team positioned
+
+  8:30 am  ├─ SCHOOL BUSES BEGIN ARRIVING
+           │   • Parking Lot A: Designated bus bays
+           │   • Parking attendants guide each bus
+           │   • Bus driver briefing (return time, parking rules)
+           │   • Student unloading zone (supervised)
+           │
+           └─ WELCOME TEAM POSITIONED
+               • Gate 1: 4 volunteers (2 per shift)
+               • Gate 2: 4 volunteers (2 per shift)
+               • Directional guidance active
+
+  9:00 am  ╔═══════════════════════════════════════╗
+           ║   EVENT START — DIVISION B            ║
+           ╚═══════════════════════════════════════╝
+
+           ├─ REGISTRATION & ACCREDITATION (VET-101)
+           │   • School teams queue by school
+           │   • Team list verification against master list
+           │   • Student ID badge issuance (color-coded: BLUE)
+           │   • Teacher/coach badge issuance
+           │   • Schedule handout (printed)
+           │   • Venue map distribution
+           │   • Emergency contact form collection
+           │   • Photo release form (if applicable)
+           │
+           ├─ LATE ARRIVAL PROTOCOL
+           │   • After 9:15 am → NAT-101 (overflow)
+           │   • Phone call to school liaison
+           │   • Documented for report
+           │
+           └─ VOLUNTEER COVERAGE
+               • Registration desk: 4 volunteers
+               • Queue management: 2 volunteers
+               • Directional: 2 volunteers per intersection
+               • Total at registration: 10 volunteers
+
+  9:15 am  ├─ REGISTRATION WINDS DOWN
+           │   • Late arrivals processed at overflow
+           │   • Registration desk transitions to info point
+           │   • Missing school report to Event Director
+           │
+           ├─ STUDENT ASSEMBLY BEGINS
+           │   • Students directed to Hall NAT-H1
+           │   • Seating by school (pre-marked rows)
+           │   • Volunteer ushers (4 per entrance)
+           │   • Teachers seated in designated area
+           │   • Photography team positioned
+           │
+           └─ FINAL HEAD COUNT
+               • Registration numbers compiled
+               • Volunteer Coordinator confirms coverage
+               • Security confirms all areas secure
+
+  9:30 am  ├─ OPENING BRIEFING (Hall NAT-H1)
+           │   • Event Director welcome
+           │   • House rules (behavior, phone use, restroom protocol)
+           │   • Safety briefing (emergency exits, first aid locations)
+           │   • Competition rules overview
+           │   • Schedule confirmation
+           │   • Q&A session (5 minutes)
+           │   • Student pledge (optional)
+           │
+           └─ TEACHER/COACH BRIEFING (Room NAT-404)
+               • Parallel session for teachers
+               • Viewing area assignment
+               • Refreshment schedule
+               • Emergency contact protocol
+               • Prize giving day information
+
+  9:45 am  ├─ COMPETITION BRIEFING
+           │   • Event format explanation
+           │   • Rotation system overview
+           │   • Time limits per station
+           │   • Scoring criteria summary
+           │   • Questions from students
+           │
+           └─ VOLUNTEER FINAL POSITIONING
+               • All volunteers at assigned stations
+               • Radio check-in complete
+               • Competition areas secured
+
+  10:00 am ╔═══════════════════════════════════════╗
+           ║   COMPETITION BEGINS — DIVISION B     ║
+           ╚═══════════════════════════════════════╝
+
+           ├─ ROTATION SYSTEM ACTIVATED
+           │   • Students divided into groups (by school or random)
+           │   • Group assignments distributed
+           │   • Volunteer guides assigned to each group
+           │   • 20-minute rotations (adjustable)
+           │
+           ├─ CONCURRENT EVENTS:
+           │
+           │   ┌─ BIOLOGY LAB (VET-201 & VET-202)
+           │   │   Event 1: Anatomy & Physiology
+           │   │   Event 2: Disease Detectives
+           │   │   Capacity: 20 students per session
+           │   │   Duration: 20 minutes
+           │   │   Judges: 2 per event
+           │   │   Volunteers: 4 (2 per room)
+           │   │   Equipment: Microscopes, specimens, worksheets
+           │   │   Safety: Lab coats, gloves, goggles available
+           │   │
+           │   ┌─ PHYSICS LAB (NAT-201 & NAT-202)
+           │   │   Event 1: Density Lab
+           │   │   Event 2: Thermodynamics
+           │   │   Capacity: 20 students per session
+           │   │   Duration: 20 minutes
+           │   │   Judges: 2 per event
+           │   │   Volunteers: 4 (2 per room)
+           │   │   Equipment: Balances, thermometers, water baths
+           │   │   Safety: Non-slip mats, spill kits
+           │   │
+           │   ┌─ ENGINEERING WORKSHOP (NAT-301 & NAT-302)
+           │   │   Event 1: Battery Buggy
+           │   │   Event 2: Mystery Architecture
+           │   │   Capacity: 15 students per session
+           │   │   Duration: 25 minutes
+           │   │   Judges: 2 per event
+           │   │   Volunteers: 4 (2 per room)
+           │   │   Equipment: Batteries, motors, building materials
+           │   │   Safety: Safety glasses, tool protocol
+           │   │
+           │   └─ MANAGEMENT SCIENCES (NAT-401)
+           │       Event: Dynamic Planet
+           │       Capacity: 25 students per session
+           │       Duration: 20 minutes
+           │       Judges: 2
+           │       Volunteers: 3
+           │       Equipment: Maps, globes, data sheets
+           │
+           ├─ ROTATION SCHEDULE (Example for 100 students):
+           │   Round 1 (10:00-10:25): Groups 1-5 at stations
+           │   Transition (10:25-10:30): 5-minute move
+           │   Round 2 (10:30-10:55): Groups rotate
+           │   Transition (10:55-11:00)
+           │   Round 3 (11:00-11:25): Groups rotate
+           │   Transition (11:25-11:30)
+           │   Round 4 (11:30-11:55): Groups rotate
+           │   Buffer (11:55-12:00): Completion & collection
+           │
+           └─ VOLUNTEER COORDINATION
+               • Floor managers (2) patrol all venues
+               • Timekeepers at each station
+               • Runners for materials/supplies
+               • Communication hub at Command Center
+
+  10:00-   ├─ CONTINUOUS OPERATIONS:
+  12:00 pm │   • Water/snack service at stations
+           │   • Restroom breaks (escorted groups)
+           │   • First aid on standby
+           │   • Photography documenting events
+           │   • Scores being recorded in real-time
+           │   • Equipment resets between groups
+           │   • Volunteer rotation (15-min breaks)
+
+  12:00 pm ╔═══════════════════════════════════════╗
+           ║   DIVISION B COMPETITION ENDS         ║
+           ╚═══════════════════════════════════════╝
+
+           ├─ STUDENT DISMISSAL
+           │   • Groups assemble at NAT-H1
+           │   • Return of borrowed materials
+           │   • Badge collection (or keep as souvenir)
+           │   • Lost & check check
+           │   • Thank you announcement
+           │   • Bus boarding begins
+           │
+           ├─ VENUE RESET (Division C Prep)
+           │   • All labs cleaned & restocked
+           │   • Equipment recalibrated
+           │   • Signage updated (if needed)
+           │   • Scoring sheets collected & secured
+           │   • Volunteer break (30 minutes)
+           │   • Catering refresh
+           │
+           └─ SCORING BEGINS
+               • Judges submit scores to VET-104
+               • Data entry team inputs scores
+               • Verification process begins
+               • Discrepancy resolution protocol
+
+---
+
+DAY 1 — DIVISION C (SSS) COMPETITION
+-------------------------------------
+Duration: 3 hours (1:00 pm — 4:00 pm)
+
+  12:00 pm ├─ LUNCH BREAK (All personnel)
+           │   • Volunteer lunch (staggered, 15-min shifts)
+           │   • Supervisor lunch
+           │   • Judges lunch
+           │   • Security rotation
+           │
+           ├─ VENUE TRANSITION
+           │   • All Division B materials removed
+           │   • Division C materials deployed
+           │   • Room reconfiguration (if needed)
+           │   • Signage verification
+           │   • Equipment final check
+           │
+           └─ VOLUNTEER RE-BRIEFING
+               • Division C specific instructions
+               • New group assignments (if different)
+               • Refresh on emergency protocols
+
+  12:30 pm ├─ SCHOOL BUSES BEGIN ARRIVING (Division C)
+           │   • Same protocol as Division B
+           │   • Parking Lot A (different bays or same)
+           │   • Student unloading supervised
+           │
+           └─ WELCOME TEAM POSITIONED
+               • Same positions as morning
+               • Fresh volunteers (if rotated)
+
+  1:00 pm  ╔═══════════════════════════════════════╗
+           ║   EVENT START — DIVISION C            ║
+           ╚═══════════════════════════════════════╝
+
+           ├─ REGISTRATION & ACCREDITATION (VET-102)
+           │   • Same process as Division B
+           │   • Student ID badges (color-coded: RED)
+           │   • Schedule handout (Division C version)
+           │   • Venue map (same, with Division C events marked)
+           │
+           └─ VOLUNTEER COVERAGE
+               • Same staffing as morning
+               • Fresh volunteers where rotated
+
+  1:15 pm  ├─ REGISTRATION WINDS DOWN
+           │   • Late arrivals to NAT-101
+           │   • Transition to info point
+           │
+           ├─ STUDENT ASSEMBLY (Hall NAT-H2)
+           │   • Same seating protocol
+           │   • Volunteer ushers
+           │   • Teachers in designated area
+           │
+           └─ FINAL HEAD COUNT
+
+  1:30 pm  ├─ OPENING BRIEFING (Hall NAT-H2)
+           │   • Event Director welcome
+           │   • House rules
+           │   • Safety briefing
+           │   • Competition rules (SSS level)
+           │   • Schedule confirmation
+           │   • Q&A session
+           │
+           └─ TEACHER/COACH BRIEFING (Room NAT-404)
+               • Same format as morning
+
+  1:45 pm  ├─ COMPETITION BRIEFING
+           │   • Format explanation
+           │   • Rotation system
+           │   • Time limits
+           │   • Scoring criteria
+           │
+           └─ VOLUNTEER FINAL POSITIONING
+
+  2:00 pm  ╔═══════════════════════════════════════╗
+           ║   COMPETITION BEGINS — DIVISION C     ║
+           ╚═══════════════════════════════════════╝
+
+           ├─ ROTATION SYSTEM ACTIVATED
+           │   • Same group system as Division B
+           │   • Volunteer guides assigned
+           │   • 20-25 minute rotations
+           │
+           ├─ CONCURRENT EVENTS:
+           │
+           │   ┌─ BIOLOGY LAB (VET-203)
+           │   │   Event: Anatomy & Physiology
+           │   │   Capacity: 20 students per session
+           │   │   Duration: 20 minutes
+           │   │   Judges: 2
+           │   │   Volunteers: 3
+           │   │   Equipment: Advanced specimens, worksheets
+           │   │   Safety: Lab coats, gloves, goggles
+           │   │
+           │   ┌─ CHEMISTRY LAB (VET-301)
+           │   │   Event: Chemistry Lab Event
+           │   │   Capacity: 20 students per session
+           │   │   Duration: 25 minutes
+           │   │   Judges: 2
+           │   │   Volunteers: 3
+           │   │   Equipment: Chemicals, glassware, safety equipment
+           │   │   Safety: Fume hood, eye wash, fire extinguisher
+           │   │   NOTE: Chemical safety officer on duty
+           │   │
+           │   ┌─ PHYSICS LAB (NAT-203 & NAT-204)
+           │   │   Event 1: Circuit Lab
+           │   │   Event 2: Solar Power
+           │   │   Capacity: 20 students per session
+           │   │   Duration: 25 minutes
+           │   │   Judges: 2 per event
+           │   │   Volunteers: 4 (2 per room)
+           │   │   Equipment: Circuit boards, solar panels, multimeters
+           │   │   Safety: Electrical safety protocol
+           │   │
+           │   ┌─ MANAGEMENT SCIENCES (NAT-402)
+           │   │   Event: Dynamic Planet
+           │   │   Capacity: 25 students per session
+           │   │   Duration: 20 minutes
+           │   │   Judges: 2
+           │   │   Volunteers: 3
+           │   │   Equipment: Advanced maps, data analysis tools
+           │   │
+           │   └─ ENGINEERING WORKSHOP (NAT-303)
+           │       Event: Electric Vehicle
+           │       Capacity: 15 students per session
+           │       Duration: 30 minutes
+           │       Judges: 2
+           │       Volunteers: 3
+           │       Equipment: Motors, batteries, chassis materials
+           │       Safety: Safety glasses, tool protocol
+           │
+           ├─ ROTATION SCHEDULE (Same format as Division B)
+           │   Round 1 (2:00-2:25)
+           │   Transition (2:25-2:30)
+           │   Round 2 (2:30-2:55)
+           │   Transition (2:55-3:00)
+           │   Round 3 (3:00-3:25)
+           │   Transition (3:25-3:30)
+           │   Round 4 (3:30-3:55)
+           │   Buffer (3:55-4:00)
+           │
+           └─ VOLUNTEER COORDINATION
+               • Same structure as morning
+
+  2:00-    ├─ CONTINUOUS OPERATIONS:
+  4:00 pm  │   • Water/snack service
+           │   • Restroom breaks
+           │   • First aid on standby
+           │   • Photography
+           │   • Real-time scoring
+           │   • Equipment resets
+           │   • Volunteer breaks
+
+  4:00 pm  ╔═══════════════════════════════════════╗
+           ║   DIVISION C COMPETITION ENDS         ║
+           ╚═══════════════════════════════════════╝
+
+           ├─ STUDENT DISMISSAL
+           │   • Groups assemble at NAT-H2
+           │   • Return of materials
+           │   • Badge collection
+           │   • Lost & found check
+           │   • Thank you announcement
+           │   • Bus boarding
+           │
+           ├─ VENUE SECURE
+           │   • All labs locked
+           │   • Equipment inventoried
+           │   • Scoring sheets collected
+           │   • Lost items logged
+           │
+           └─ SCORING CONTINUES
+               • All scores compiled
+               • Verification complete
+               • Ranking calculation begins
+               • Tie-breaker protocol (if needed)
+
+  5:00 pm  ├─ DAY 1 WRAP-UP MEETING
+           │   • Event Director debrief
+           │   • Issues log review
+           │   • Day 2 preparation checklist
+           │   • Volunteer appreciation
+           │   • Security handover
+           │
+           └─ VENUE LOCKDOWN
+               • All buildings secured
+               • Keys to night security
+               • Alarm systems activated
+
+================================================================================
+SECTION 3: DETAILED RUN OF SHOW — DAY 2 (PRIZE GIVING & CLOSING)
+================================================================================
+
+PRE-EVENT (Morning of Day 2)
+-----------------------------
+  7:00 am  ├─ CORE TEAM ARRIVAL
+           │   • Event Director
+           │   • Prize preparation team
+           │   • Venue decorators
+           │   • Media team
+           │   • Catering team
+           │
+           ├─ VENUE SETUP
+           │   • Hall NAT-H1 decorated for ceremony
+           │   • Stage setup (podium, backdrop, banners)
+           │   • Seating arrangement (schools, VIPs, media)
+           │   • Prize table setup
+           │   • Audio-visual final test
+           │   • Photography positions
+           │
+           └─ PRIZE VERIFICATION
+               • All prizes accounted for
+               • Certificates printed & sorted
+               • Trophies/medals arranged by category
+               • Backup prizes ready
+
+  8:00 am  ├─ VOLUNTEER ARRIVAL
+           │   • Sign-in
+           │   • Role assignment (usher, registration, backstage)
+           │   • Venue familiarization
+           │   • Final briefing
+           │
+           ├─ SECURITY POSITIONING
+           │   • Gate control
+           │   • Parking management
+           │   • VIP escort ready
+           │   • Emergency protocols
+           │
+           └─ MEDIA SETUP
+               • Press registration desk
+               • Camera positions
+               • Interview area
+               • Live streaming setup (if applicable)
+
+  9:00 am  ├─ SCHOOLS BEGIN ARRIVING
+           │   • Both Division B & C schools
+           │   • Parking Lot A
+           │   • Guided to Hall NAT-H1
+           │   • Seating by school (pre-assigned)
+           │
+           ├─ VIP ARRIVAL
+           │   • Parking Lot B
+           │   • Escort to VIP Meeting Room (NAT-404)
+           │   • Refreshments
+           │   • Program briefing
+           │
+           └─ REGISTRATION
+               • Attendance confirmation
+               • Late additions noted
+               • Program distribution
+
+  10:00 am ╔═══════════════════════════════════════╗
+           ║   PRIZE GIVING CEREMONY BEGINS        ║
+           ╚═══════════════════════════════════════╝
+
+           ├─ PRE-CEREMONY (10:00-10:15)
+           │   • Students seated
+           │   • VIPs seated
+           │   • Media in position
+           │   • Photography ready
+           │   • Audio check
+           │   • House lights dim
+           │
+           ├─ OPENING (10:15-10:30)
+           │   10:15 ├─ Processional music
+           │   10:17 ├─ Master of Ceremonies welcome
+           │   10:19 ├─ Opening prayer
+           │   10:21 ├─ National Anthem
+           │   10:24 ├─ Introduction of dignitaries
+           │   10:28 ├─ Welcome address by VC/University rep
+           │
+           ├─ KEYNOTE / INSPIRATION (10:30-10:45)
+           │   10:30 ├─ Guest speaker / Keynote address
+           │   10:40 ├─ Q&A or interactive moment
+           │
+           ├─ COMPETITION HIGHLIGHTS (10:45-11:00)
+           │   10:45 ├─ Video montage of Day 1
+           │   10:50 ├─ Event Director's remarks
+           │   10:55 ├─ Acknowledgment of sponsors
+           │
+           ├─ PRIZE PRESENTATION (11:00-11:45)
+           │   
+           │   DIVISION B PRIZES:
+           │   11:00 ├─ 3rd Place — School trophy + student medals
+           │   11:05 ├─ 2nd Place — School trophy + student medals
+           │   11:10 ├─ 1st Place — School trophy + student medals
+           │   11:15 ├─ Individual Event Winners (certificates)
+           │   11:20 ├─ Special Awards (if any)
+           │   
+           │   DIVISION C PRIZES:
+           │   11:25 ├─ 3rd Place — School trophy + student medals
+           │   11:30 ├─ 2nd Place — School trophy + student medals
+           │   11:35 ├─ 1st Place — School trophy + student medals
+           │   11:40 ├─ Individual Event Winners (certificates)
+           │   11:45 ├─ Special Awards (if any)
+           │   
+           │   PRESENTATION PROTOCOL:
+           │   • Name called → Student comes forward
+           │   • Handshake with dignitary
+           │   • Photo opportunity
+           │   • Return to seat
+           │   • Volunteer escort for younger students
+           │
+           ├─ CLOSING (11:45-12:00)
+           │   11:45 ├─ Overall champions announcement
+           │   11:50 ├─ Closing remarks by Event Director
+           │   11:53 ├─ Vote of thanks
+           │   11:56 ├─ Closing prayer
+           │   11:58 ├─ Recessional music
+           │   12:00 ├─ Ceremony ends
+           │
+           └─ POST-CEREMONY (12:00-12:30)
+               • Photo sessions (winners, schools, dignitaries)
+               • Media interviews
+               • Certificate distribution (if not done on stage)
+               • Networking / refreshment
+               • School dismissal begins
+
+  12:30 pm ├─ VENUE CLEARANCE
+           │   • All attendees departed
+           │   • Lost & found final check
+           │   • Equipment removal begins
+           │   • Decoration dismantling
+           │
+           └─ TEAM DEBRIEF
+               • Event Director final remarks
+               • Volunteer thank you
+               • Issue documentation
+               • Lessons learned
+               • Next year planning notes
+
+  2:00 pm  ├─ VENUE RESTORED
+           │   • All furniture returned to original positions
+           │   • All equipment removed
+           │   • Cleaning complete
+           │   • Keys returned
+           │   • Security handover
+           │
+           └─ POST-EVENT REPORTING
+               • Attendance numbers finalized
+               • Financial reconciliation
+               • Media compilation
+               • Thank you letters to sponsors
+               • Report to Science Olympiad Nigeria
+
+================================================================================
+SECTION 4: VOLUNTEER MANAGEMENT
+================================================================================
+
+VOLUNTEER STRUCTURE (10:2 ratio = 5:1)
+----------------------------------------
+Assuming 200 students per division = 400 total students
+Required volunteers: 400 ÷ 5 = 80 volunteers
+
+Breakdown:
+  • Registration Team:        10 volunteers
+  • Ushers & Guides:          15 volunteers
+  • Lab Assistants:           20 volunteers (4 per lab × 5 labs)
+  • Runners & Logistics:      10 volunteers
+  • Catering & Refreshment:   8 volunteers
+  • Security Assistants:      6 volunteers
+  • Media & Photography:        4 volunteers
+  • First Aid Support:        4 volunteers
+  • Command Center:           3 volunteers
+  TOTAL:                      80 volunteers
+
+VOLUNTEER TRAINING (1 week before event)
+------------------------------------------
+Session 1: Orientation
+  • Event overview & mission
+  • Role-specific training
+  • Venue walk-through
+  • Emergency procedures
+  • Communication protocols
+
+Session 2: Practical Training
+  • Mock registration
+  • Lab safety drill
+  • Evacuation drill
+  • Radio communication practice
+  • Customer service standards
+
+Session 3: Final Briefing (Day before)
+  • Final role confirmation
+  • Schedule review
+  • Contact list distribution
+  • Uniform/badge collection
+  • Shift assignments
+
+VOLUNTEER SCHEDULE
+-------------------
+Shift 1: 7:00 am — 12:30 pm (Division B)
+Shift 2: 12:00 pm — 5:00 pm (Division C)
+Shift 3: 7:00 am — 2:00 pm (Day 2)
+
+Overlap volunteers (10): Work both shifts on Day 1
+Fresh volunteers (70): Split between shifts
+
+================================================================================
+SECTION 5: SAFETY & EMERGENCY PROTOCOLS
+================================================================================
+
+MEDICAL EMERGENCY
+------------------
+1. First responder (nearest volunteer) assesses situation
+2. Radio call to Command Center: "MEDICAL EMERGENCY [location]"
+3. Medical Officer responds immediately
+4. If serious: Call University Health Services / 112
+5. Isolate area, clear crowd
+6. Document incident
+7. Notify parents (if student) via school liaison
+8. Continue event if possible, or pause if necessary
+
+FIRE EMERGENCY
+---------------
+1. Nearest person activates fire alarm
+2. Evacuate building via nearest exit
+3. Assembly at designated point
+4. Roll call by volunteer team leaders
+5. Fire service notification
+6. Do NOT re-enter until cleared
+
+SECURITY INCIDENT
+------------------
+1. Alert nearest security personnel
+2. Radio call to Command Center
+3. Security Lead assesses & responds
+4. Isolate incident area
+5. Document & report
+6. Notify police if criminal activity
+
+MISSING PERSON
+---------------
+1. Report to Command Center immediately
+2. Last known location identified
+3. Volunteer search team deployed
+4. PA announcement (if appropriate)
+5. Check restroom, lost & found, parking
+6. Notify parents after 15 minutes
+7. Security camera review if available
+
+EQUIPMENT FAILURE
+------------------
+1. Report to Lab Supervisor
+2. Attempt backup equipment
+3. If unresolvable: Pause event, move to backup station
+4. Document for post-event review
+5. Adjust timing if needed
+
+================================================================================
+SECTION 6: EQUIPMENT & MATERIALS CHECKLIST
+================================================================================
+
+REGISTRATION DESK
+------------------
+□ Master school list (printed ×3)
+□ Student ID badge blanks (BLUE for B, RED for C)
+□ Badge printer & backup
+□ Lanyards
+□ Schedule handouts (Division B ×200, Division C ×200)
+□ Venue maps
+□ Pens, markers, highlighters
+□ Clipboards
+□ Emergency contact forms
+□ Sign-in sheets
+□ Name tags for volunteers
+□ Lost & found log book
+
+LAB EQUIPMENT (Per Lab)
+------------------------
+□ Event-specific equipment (see event list)
+□ Backup equipment (20% extra)
+□ Safety equipment (goggles, gloves, lab coats)
+□ First aid kit
+□ Fire extinguisher
+□ Spill kit
+□ Waste disposal bins
+□ Timer/stopwatch
+□ Scoring sheets (printed × sessions needed)
+□ Clipboards
+□ Pens (black, red)
+□ Calculator
+□ Water station
+
+COMMAND CENTER
+---------------
+□ Radio set (1 per team lead = 15)
+□ Charging station
+□ Master schedule (large print)
+□ Contact list (all personnel)
+□ Emergency numbers posted
+□ Incident report forms
+□ Backup power (generator)
+□ Printer & paper
+□ Laptop with scoring software
+□ Whiteboard & markers
+□ Clock (synchronized)
+
+CATERING
+---------
+□ Water dispensers (10)
+□ Water cups (1000)
+□ Snack packs (500)
+□ Lunch boxes (100 — for core team)
+□ Trash bins with liners
+□ Hand sanitizer stations
+□ Napkins
+□ Coolers with ice
+
+MEDIA/PHOTOGRAPHY
+------------------
+□ Cameras (2 professional + 1 backup)
+□ Memory cards (extra)
+□ Batteries & chargers
+□ Tripods
+□ Lighting equipment
+□ Interview backdrop
+□ Press kits
+□ Social media access credentials
+
+================================================================================
+SECTION 7: COMMUNICATION PLAN
+================================================================================
+
+INTERNAL COMMUNICATION
+-----------------------
+Primary:   Two-way radios (Channel 1: Command, Channel 2: Operations)
+Secondary: WhatsApp group ("Science Olympiad 2026 Core Team")
+Tertiary:  Phone calls (emergency only)
+
+RADIO CHANNELS:
+  Channel 1: Command Center ↔ All Team Leads
+  Channel 2: Floor Operations (volunteers, supervisors)
+  Channel 3: Security
+  Channel 4: Medical
+  Channel 5: Catering & Logistics
+
+EXTERNAL COMMUNICATION
+-----------------------
+Schools:      WhatsApp group + SMS blast
+Parents:      School liaison system
+Media:        Press release template + media contact
+Sponsors:     Dedicated liaison
+University:   Official communication channels
+
+EMERGENCY CONTACTS (Posted at Command Center)
+----------------------------------------------
+• University Security:     [Number]
+• University Health Centre:  [Number]
+• Fire Service:              112
+• Police:                    [Number]
+• Ambulance:                 112
+• Event Director:            [Number]
+• Volunteer Coordinator:     [Number]
+• Venue Manager (Vet):       [Number]
+• Venue Manager (Nat Sci):   [Number]
+
+================================================================================
+SECTION 8: BUDGET FRAMEWORK (ESTIMATED)
+================================================================================
+
+ITEM                                    ESTIMATED COST (₦)
+-----------------------------------------------------------
+Venue Rental (2 days)                   150,000
+Equipment & Materials                   300,000
+Volunteer Refreshment & Lunch           80,000
+Student Refreshment                     100,000
+Prizes (Trophies, Medals, Certificates)  200,000
+Printing (Schedules, Maps, Badges)      50,000
+Signage & Banners                       80,000
+Audio-Visual Rental                     120,000
+Security Services                       60,000
+Medical Support                         40,000
+Catering (Day 2 Ceremony)               150,000
+Media & Photography                     80,000
+Transportation (if needed)              50,000
+Contingency (10%)                       146,000
+-----------------------------------------------------------
+TOTAL ESTIMATED BUDGET                ₦1,606,000
+
+================================================================================
+SECTION 9: RISK MANAGEMENT MATRIX
+================================================================================
+
+RISK                    LIKELIHOOD   IMPACT   MITIGATION
+------------------------------------------------------------
+Equipment failure       Medium       High     Backup equipment; technician on-site
+Student injury          Low          High     First aid stations; medical officer
+Overcrowding            Medium       Medium   Capacity limits; crowd control
+Power outage            Low          High     Generator backup; battery-powered equipment
+Bad weather             Low          Medium   Indoor venues; rain plan for outdoor
+Late school arrival     High         Low      Buffer time; overflow registration
+Volunteer no-show       Medium       Medium   Over-recruit; shift flexibility
+Data loss               Low          High     Cloud backup; paper backup scores
+Security breach         Low          High     Security personnel; access control
+Catering shortage       Low          Medium   Over-order; backup supplier
+
+================================================================================
+SECTION 10: POST-EVENT CHECKLIST
+================================================================================
+
+IMMEDIATE (Within 24 hours)
+----------------------------
+□ Venue restoration complete
+□ All equipment returned/secured
+□ Keys returned to authorities
+□ Incident reports filed
+□ Lost & found items logged
+□ Volunteer thank you messages sent
+□ Media compilation started
+
+SHORT-TERM (Within 1 week)
+---------------------------
+□ Financial reconciliation complete
+□ Sponsor thank you letters sent
+□ School feedback surveys sent
+□ Volunteer feedback collected
+□ Photo/video editing complete
+□ Press release issued
+□ Social media content published
+
+LONG-TERM (Within 1 month)
+---------------------------
+□ Final report to Science Olympiad Nigeria
+□ Lessons learned document
+□ Budget finalization
+□ Archive all materials
+□ Plan next year's improvements
+□ Recognition for outstanding volunteers
+
+================================================================================
+                            END OF EVENT PLAN
+================================================================================

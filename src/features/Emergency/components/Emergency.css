@@ -1,0 +1,205 @@
+/* Emergency & Safety CSS */
+
+.emergency-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Alert Banner */
+.alert-banner {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding: 16px 20px;
+  border-radius: 12px;
+  margin-top: 16px;
+}
+
+.alert-banner .alert-icon {
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.alert-banner p {
+  font-size: 0.88rem;
+  margin-top: 4px;
+  opacity: 0.95;
+}
+
+/* Split Columns */
+.emergency-split-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 24px;
+}
+
+.protocols-panel, .contacts-panel {
+  padding: 24px;
+}
+
+/* Protocols Accordion */
+.protocols-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.accordion-item {
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.accordion-item.open {
+  border-color: var(--color-danger);
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.08);
+}
+
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: transparent;
+  border: none;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+}
+
+.trigger-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.trigger-icon {
+  color: var(--color-danger);
+}
+
+.accordion-content {
+  padding: 0 20px 20px 20px;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-input);
+  animation: fadeIn var(--transition-fast) forwards;
+}
+
+/* Step list style */
+.step-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.step-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-danger);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.step-text {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Contacts Directory Grid */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.contact-card {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contact-role {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.contact-number {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-primary);
+}
+
+.contact-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.contact-call-btn, .contact-copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-input);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.contact-call-btn:hover, .contact-copy-btn:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.contact-copy-btn.copied {
+  background-color: var(--color-success-bg);
+  border-color: var(--color-success);
+  color: var(--color-success);
+}
+
+/* Copied toast indicator */
+.copied-toast {
+  position: absolute;
+  bottom: 4px;
+  right: 12px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--color-success);
+  animation: fadeIn var(--transition-fast) forwards;
+}
+
+/* Responsiveness */
+@media (max-width: 900px) {
+  .emergency-split-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,244 @@
+/* Dashboard Layout */
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  background: linear-gradient(135deg, var(--bg-surface) 0%, rgba(99, 102, 241, 0.05) 100%);
+  border-radius: 16px;
+}
+
+.banner-content {
+  flex: 1;
+}
+
+.banner-content h1 {
+  font-size: 2.5rem;
+  margin: 12px 0 8px 0;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.banner-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Banner Theme block */
+.banner-theme {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-card {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  color: white;
+  padding: 24px 32px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.4);
+  transform: rotate(2deg);
+  transition: transform var(--transition-normal);
+}
+
+.theme-card:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.theme-title {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  opacity: 0.8;
+  margin-bottom: 4px;
+}
+
+.theme-value {
+  font-size: 1.8rem;
+  font-weight: 850;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+/* Stats Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.stat-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+
+.stat-icon-wrapper.prim { background: rgba(99, 102, 241, 0.1); color: var(--color-primary); }
+.stat-icon-wrapper.info { background: rgba(59, 130, 246, 0.1); color: var(--color-info); }
+.stat-icon-wrapper.succ { background: rgba(16, 185, 129, 0.1); color: var(--color-success); }
+.stat-icon-wrapper.warn { background: rgba(245, 158, 11, 0.1); color: var(--color-warning); }
+
+.stat-info h3 {
+  font-size: 1.15rem;
+  margin: 0 0 2px 0;
+  font-weight: 700;
+}
+
+.stat-desc {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Content Columns */
+.dashboard-content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.overview-card, .quick-access-card {
+  padding: 24px;
+}
+
+.overview-card h2, .quick-access-card h2 {
+  font-size: 1.35rem;
+  margin-bottom: 16px;
+  border-left: 4px solid var(--color-primary);
+  padding-left: 12px;
+}
+
+.features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.feat-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  margin-top: 8px;
+  flex-shrink: 0;
+}
+
+.alert-box {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 16px 0;
+  font-size: 0.9rem;
+}
+
+.alert-box p {
+  font-size: 0.8rem;
+  margin-top: 2px;
+  opacity: 0.9;
+}
+
+.quick-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.btn-danger {
+  background-color: var(--color-danger);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c;
+}
+
+.btn-secondary {
+  background-color: var(--bg-input);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+.btn-secondary:hover {
+  background-color: var(--border-color);
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .welcome-banner {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 24px;
+  }
+  
+  .theme-card {
+    transform: none;
+    width: 100%;
+  }
+
+  .theme-card:hover {
+    transform: scale(1.02);
+  }
+
+  .dashboard-content-grid {
+    grid-template-columns: 1fr;
+  }
+}

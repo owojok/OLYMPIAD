@@ -1,0 +1,261 @@
+/* Schools Accreditation CSS */
+
+.schools-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Quick Stats Row */
+.schools-quick-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Page Columns */
+.schools-split-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.schools-list-panel, .attendance-report-panel {
+  padding: 24px;
+}
+
+/* Roster Division selectors */
+.div-selectors {
+  display: flex;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.div-select-btn {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 6px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.div-select-btn.active {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+/* School Cards Roster list */
+.schools-roster-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 55vh;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.school-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.school-check-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.school-check-card.checked {
+  border-color: var(--color-success);
+  background-color: var(--color-success-bg);
+}
+
+.school-check-card.form-active {
+  border-color: var(--color-primary);
+  background-color: var(--bg-input);
+}
+
+.school-check-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.school-unchecked-box {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-input);
+  transition: border-color var(--transition-fast);
+}
+
+.school-check-card:hover .school-unchecked-box {
+  border-color: var(--color-primary);
+}
+
+.school-check-card.checked .check-icon {
+  color: var(--color-success);
+}
+
+.school-details {
+  flex: 1;
+}
+
+.school-details h4 {
+  font-size: 1.05rem;
+  margin: 0 0 4px 0;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.school-check-card.checked .school-details h4 {
+  color: var(--text-secondary);
+}
+
+.school-badge-label {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Logged check-in details badges */
+.school-logged-meta {
+  margin-top: 8px;
+}
+
+.meta-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.info-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.info-chip.time {
+  background-color: var(--bg-input);
+  font-weight: 600;
+}
+
+.school-card-actions {
+  display: flex;
+  gap: 6px;
+  margin-left: 12px;
+}
+
+/* Check-in Form Expandable Panel */
+.school-checkin-form {
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background-color: var(--bg-input);
+  animation: slide-down 0.2s ease-out;
+}
+
+.school-checkin-form h3 {
+  font-size: 1.05rem;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.school-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  .school-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.form-group input {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+/* Attendance Sidebar Panel */
+.schools-sidebar {
+  position: sticky;
+  top: 20px;
+  align-self: start;
+}
+
+.division-progress-container {
+  background-color: var(--bg-input);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-top: 14px;
+}
+
+.operational-notices-section h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+/* Animations */
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsiveness */
+@media (max-width: 990px) {
+  .schools-split-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .schools-sidebar {
+    position: static;
+  }
+}

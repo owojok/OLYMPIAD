@@ -1,0 +1,348 @@
+/* Venue Layout CSS */
+
+.venue-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Faculty Switcher */
+.faculty-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.faculty-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.faculty-tab:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.faculty-tab.active {
+  background-color: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+}
+
+/* Page Split Grid */
+.venue-layout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.venue-main-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Map Controls */
+.venue-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.floor-filters {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.floor-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.floor-chip {
+  padding: 5px 12px;
+  font-size: 0.8rem;
+  font-weight: 550;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-input);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+}
+
+.floor-chip:hover {
+  border-color: var(--text-muted);
+}
+
+.floor-chip.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+}
+
+/* Floor Sections and Room Cards */
+.floor-section {
+  margin-bottom: 28px;
+}
+
+.floor-title {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
+  font-weight: 700;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.room-card {
+  padding: 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.room-card.selected {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px var(--color-accent);
+}
+
+.room-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.room-id {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+}
+
+.room-type-badge {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.room-name {
+  font-size: 1rem;
+  margin: 0 0 6px 0;
+  font-weight: 700;
+}
+
+.room-allocation {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  flex: 1;
+}
+
+.room-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+  margin-top: auto;
+}
+
+.status-dot-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-secondary);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.status-dot.active { background-color: var(--color-success); box-shadow: 0 0 6px var(--color-success); }
+.status-dot.prep { background-color: var(--color-warning); box-shadow: 0 0 6px var(--color-warning); }
+.status-dot.inactive { background-color: var(--text-muted); }
+
+.details-prompt {
+  color: var(--color-primary);
+  font-weight: 600;
+  opacity: 0;
+  transform: translateX(4px);
+  transition: all var(--transition-fast);
+}
+
+.room-card:hover .details-prompt {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Specific Room Type Color Highlights on left border */
+.room-card.biology-lab, .room-card.chemistry-lab, .room-card.physics-lab, .room-card.engineering-workshop { border-left: 3px solid var(--color-danger); }
+.room-card.office, .room-card.calibration { border-left: 3px solid var(--color-primary); }
+.room-card.medical, .room-card.safety { border-left: 3px solid var(--color-success); }
+.room-card.registration { border-left: 3px solid var(--color-info); }
+.room-card.catering, .room-card.meeting-room, .room-card.rest-area { border-left: 3px solid var(--color-warning); }
+
+/* Sidebar details panel */
+.venue-sidebar {
+  position: sticky;
+  top: 20px;
+  align-self: start;
+}
+
+.sidebar-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+  color: var(--text-secondary);
+}
+
+.map-icon {
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.sidebar-empty p {
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.room-detail-panel {
+  padding: 24px;
+}
+
+.detail-header {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.room-id-lg {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.detail-header h2 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.room-type-badge-lg {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: var(--color-primary-hover);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.detail-section {
+  margin-bottom: 20px;
+}
+
+.detail-section h4 {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.alloc-text {
+  font-size: 1.05rem;
+  font-weight: 550;
+  line-height: 1.4;
+}
+
+.no-events-text {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+}
+
+.room-events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.room-event-card {
+  padding: 10px 12px;
+  border-radius: 6px;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+}
+
+.room-event-card .event-time {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 2px;
+}
+
+.room-event-card .event-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .venue-layout-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .venue-sidebar {
+    position: static;
+  }
+}

@@ -1,0 +1,227 @@
+/* Judges Roster CSS */
+
+.judges-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.judges-quick-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.judges-split-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+.judges-list-panel, .judges-sidebar-panel {
+  padding: 24px;
+}
+
+/* Card list styling */
+.judges-roster-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  max-height: 55vh;
+  overflow-y: auto;
+  padding-right: 4px;
+  margin-top: 16px;
+}
+
+.judge-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  position: relative;
+}
+
+.judge-card.checked {
+  border-color: var(--color-success);
+  background-color: var(--color-success-bg);
+}
+
+.judge-check-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.judge-unchecked-box {
+  width: 22px;
+  height: 22px;
+  border-radius: 4px; /* Square checkboxes for judges */
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-input);
+  transition: border-color var(--transition-fast);
+}
+
+.judge-card:hover .judge-unchecked-box {
+  border-color: var(--color-primary);
+}
+
+.judge-card.checked .check-icon {
+  color: var(--color-success);
+}
+
+.judge-info {
+  flex: 1;
+}
+
+.judge-info h4 {
+  font-size: 1.1rem;
+  margin: 0 0 4px 0;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.judge-card.checked .judge-info h4 {
+  color: var(--text-secondary);
+}
+
+.judge-meta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 6px;
+}
+
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.meta-chip.event {
+  background-color: var(--color-primary-bg);
+  border-color: var(--color-primary);
+  color: var(--color-primary-text);
+  font-weight: 600;
+}
+
+.meta-chip.missing {
+  border-style: dashed;
+  color: var(--text-muted);
+}
+
+/* Actions styling */
+.judge-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 12px;
+}
+
+/* Add/Edit Form styling */
+.judge-form-panel {
+  margin-top: 16px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background-color: var(--bg-input);
+  animation: slide-down 0.2s ease-out;
+}
+
+.judge-form-panel h3 {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.form-group input, .form-group select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* Edit Card Mode styling */
+.judge-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 4px 0;
+}
+
+.edit-fields-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .edit-fields-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Notices and sidebar decoration */
+.coverage-progress-container {
+  background-color: var(--bg-input);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  margin-top: 14px;
+}
+
+/* Animations */
+@keyframes slide-down {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsiveness */
+@media (max-width: 990px) {
+  .judges-split-layout {
+    grid-template-columns: 1fr;
+  }
+}
