@@ -8,6 +8,14 @@ export interface RegisteredVolunteer {
   timestamp: string;
 }
 
+export const INITIAL_REGISTERED_VOLUNTEERS: RegisteredVolunteer[] = [
+  { id: 'reg-init-1', fullName: 'Isreal Awolusi', phone: '08109001253', email: 'isreal.awolusi@gmail.com', timestamp: '06/19/2026 11:45 AM' },
+  { id: 'reg-init-2', fullName: 'Iliya David Gideon', phone: '08138466049', email: 'gideon.david@gmail.com', timestamp: '06/19/2026 11:45 AM' },
+  { id: 'reg-init-3', fullName: 'Nanchin Isaac Dawam', phone: '09030549833', email: 'dawam.nanchin@gmail.com', timestamp: '06/19/2026 11:45 AM' },
+  { id: 'reg-init-4', fullName: 'DANJUMA RICHARD', phone: '08101437988', email: 'richard.danjuma@gmail.com', timestamp: '06/19/2026 11:45 AM' },
+  { id: 'reg-init-5', fullName: 'Musa G Yohanna', phone: '09032943213', email: 'yohanna.musa@gmail.com', timestamp: '06/19/2026 11:45 AM' }
+];
+
 export const useVolunteerRegistration = () => {
   const [registeredVolunteers, setRegisteredVolunteers] = useState<RegisteredVolunteer[]>([]);
 
@@ -17,9 +25,12 @@ export const useVolunteerRegistration = () => {
       const stored = localStorage.getItem('so_registered_volunteers');
       if (stored) {
         setRegisteredVolunteers(JSON.parse(stored));
+      } else {
+        setRegisteredVolunteers(INITIAL_REGISTERED_VOLUNTEERS);
       }
     } catch (e) {
       console.error('Failed to load registered volunteers from localStorage', e);
+      setRegisteredVolunteers(INITIAL_REGISTERED_VOLUNTEERS);
     }
   }, []);
 
