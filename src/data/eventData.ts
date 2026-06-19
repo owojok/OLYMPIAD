@@ -812,8 +812,9 @@ export interface Judge {
 
 export const INITIAL_JUDGES: Judge[] = [
   { id: 'jdg-1', name: 'Roland Hoomkwap', email: '', phone: '', assignedEvent: 'Anatomy & Physiology', present: false },
-  { id: 'jdg-2', name: 'Dr. Osinbajo', email: '', phone: '', assignedEvent: 'Disease Detectives', present: false },
+  { id: 'jdg-2', name: 'Dr. Olusegun Osibajo', email: 'Olusegunoshibanjo@gmail.com', phone: '234 805 543 8564', assignedEvent: 'Disease Detectives', present: false },
   { id: 'jdg-3', name: 'Nkup Jude Yunzoom', email: 'nkup1989@gmail.com', phone: '', assignedEvent: 'Chemistry Lab Event', present: false },
   { id: 'jdg-4', name: 'Lokta Danladi Solomon', email: 'loktasolomon@gmail.com', phone: '', assignedEvent: 'Density Lab', present: false },
-  { id: 'jdg-5', name: 'Stephen Morgark', email: '', phone: '', assignedEvent: 'Circuit Lab', present: false }
+  { id: 'jdg-5', name: 'Stephen Morgark', email: '', phone: '', assignedEvent: 'Circuit Lab', present: false },
+  { id: 'jdg-6', name: 'Dr. Eyiaromi Ademileke Folorounsho', email: 'adefire4life@gmail.com', phone: '234 806 532 1030', assignedEvent: 'Thermodynamics', present: false }
 ];
