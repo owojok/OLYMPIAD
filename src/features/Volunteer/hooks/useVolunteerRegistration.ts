@@ -15,7 +15,9 @@ export const INITIAL_REGISTERED_VOLUNTEERS: RegisteredVolunteer[] = [
   { id: 'reg-init-4', fullName: 'DANJUMA RICHARD', phone: '08101437988', email: 'richard.danjuma@gmail.com', timestamp: '06/19/2026 11:45 AM' },
   { id: 'reg-init-5', fullName: 'Musa G Yohanna', phone: '09032943213', email: 'yohanna.musa@gmail.com', timestamp: '06/19/2026 11:45 AM' },
   { id: 'reg-init-6', fullName: 'Nonyerem Agatha Asadu', phone: '08067248861', email: 'nonyerem.asadu@gmail.com', timestamp: '06/19/2026 11:55 AM' },
-  { id: 'reg-init-7', fullName: 'Grace Ochanya Agene', phone: '09069208659', email: 'grace.agene@gmail.com', timestamp: '06/19/2026 11:55 AM' }
+  { id: 'reg-init-7', fullName: 'Grace Ochanya Agene', phone: '09069208659', email: 'grace.agene@gmail.com', timestamp: '06/19/2026 11:55 AM' },
+  { id: 'reg-init-8', fullName: 'Wisdom Chijioke Chidera', phone: '08123332173', email: 'wisdom.chidera@gmail.com', timestamp: '06/19/2026 12:45 PM' },
+  { id: 'reg-init-9', fullName: 'Maleka Bitrus', phone: '0813 605 3551', email: 'bitrus.maleka@gmail.com', timestamp: '06/19/2026 12:45 PM' }
 ];
 
 export const useVolunteerRegistration = () => {
