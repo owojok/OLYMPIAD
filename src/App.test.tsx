@@ -49,4 +49,17 @@ describe('App Integration', () => {
     fireEvent.click(themeBtn);
     expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
   });
+
+  it('routes to volunteer registration when hash is #/register', () => {
+    window.location.hash = '#/register';
+    render(<App />);
+    
+    expect(screen.getByText('Volunteer Sign-Up')).toBeInTheDocument();
+    expect(screen.getByLabelText(/full name/i)).toBeInTheDocument();
+    
+    // Check that admin elements like sidebar logo are NOT rendered
+    expect(screen.queryByText('SO NIGERIA 26')).not.toBeInTheDocument();
+    
+    window.location.hash = '';
+  });
 });

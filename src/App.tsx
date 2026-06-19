@@ -19,7 +19,7 @@ import {
 import { DashboardView } from './features/Dashboard';
 import { ScheduleView } from './features/Schedule';
 import { VenueView, useVenues } from './features/VenueMap';
-import { VolunteerView, useVolunteers } from './features/Volunteer';
+import { VolunteerView, useVolunteers, useVolunteerRegistration, VolunteerRegisterForm } from './features/Volunteer';
 import { ChecklistView } from './features/Checklist';
 import { BudgetView } from './features/Budget';
 import { EmergencyView } from './features/Emergency';
@@ -49,6 +49,25 @@ function App() {
   const venueHook = useVenues();
   const volunteerHook = useVolunteers();
   const committeeHook = useCommittee();
+  const registrationHook = useVolunteerRegistration();
+
+  // Listen for hash routing (e.g., #/register) for public volunteer sign-up
+  useEffect(() => {
+    const handleHashChange = () => {
+      if (window.location.hash === '#/register') {
+        setActiveTab('register');
+      }
+    };
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  useEffect(() => {
+    if (activeTab !== 'register' && window.location.hash === '#/register') {
+      window.location.hash = '';
+    }
+  }, [activeTab]);
 
   // Load and apply theme
   useEffect(() => {
@@ -203,7 +222,7 @@ function App() {
       case 'venues':
         return <VenueView venueHook={venueHook} />;
       case 'volunteers':
-        return <VolunteerView volunteerHook={volunteerHook} />;
+        return <VolunteerView volunteerHook={volunteerHook} registrationHook={registrationHook} />;
       case 'checklists':
         return <ChecklistView />;
       case 'schools':
@@ -241,6 +260,10 @@ function App() {
     { id: 'committee', label: 'Committee Tasks', icon: <UserCheck size={18} /> },
     { id: 'emergency', label: 'Emergency Hub', icon: <ShieldAlert size={18} /> }
   ];
+
+  if (activeTab === 'register') {
+    return <VolunteerRegisterForm registrationHook={registrationHook} />;
+  }
 
   return (
     <div className="app-container">

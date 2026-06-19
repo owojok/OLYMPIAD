@@ -616,6 +616,14 @@ export const MATERIAL_CHECKLISTS: { [category: string]: string[] } = {
     'Interview backdrop',
     'Press kits',
     'Social media access credentials'
+  ],
+  'Ceremony & Hall Logistics': [
+    'Hall permission (signed document)',
+    'Chairs for all (students & audience)',
+    'Sound system',
+    'High table setup',
+    'Chairs and table',
+    'P.A system'
   ]
 };
 

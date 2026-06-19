@@ -2,14 +2,16 @@ import React from 'react';
 import { VOLUNTEER_TRAINING } from '../../../data/eventData';
 import { useVolunteerChecklist } from '../hooks/useVolunteerChecklist';
 import type { useVolunteers } from '../hooks/useVolunteers';
-import { Clock, Award, CheckCircle, RefreshCcw, AlertCircle, ShieldAlert } from 'lucide-react';
+import type { useVolunteerRegistration } from '../hooks/useVolunteerRegistration';
+import { Clock, Award, CheckCircle, RefreshCcw, AlertCircle, ShieldAlert, Trash2 } from 'lucide-react';
 import './Volunteer.css';
 
 interface VolunteerViewProps {
   volunteerHook: ReturnType<typeof useVolunteers>;
+  registrationHook: ReturnType<typeof useVolunteerRegistration>;
 }
 
-export const VolunteerView: React.FC<VolunteerViewProps> = ({ volunteerHook }) => {
+export const VolunteerView: React.FC<VolunteerViewProps> = ({ volunteerHook, registrationHook }) => {
   const { completedSessions, toggleSession, progressPercent } = useVolunteerChecklist();
   const { roles, totalVolunteers, updateRoleCount, resetRoles, validationError } = volunteerHook;
 
@@ -208,6 +210,62 @@ export const VolunteerView: React.FC<VolunteerViewProps> = ({ volunteerHook }) =
             <strong> Roster Notes:</strong> 5 Core Overlap volunteers are assigned to work *both* shifts on Day 1 for continuous operational logic, while the remaining 35 volunteers are split evenly.
           </div>
         </div>
+      </div>
+
+      {/* Registered Staff Roster Section */}
+      <div className="volunteer-registrations-panel glass-panel" style={{ marginTop: 24 }}>
+        <div className="panel-header-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 12 }}>
+          <h3>Registered Staff Roster ({registrationHook.registeredVolunteers.length})</h3>
+          {registrationHook.registeredVolunteers.length > 0 && (
+            <button className="btn btn-secondary btn-sm" onClick={registrationHook.clearRegistrations} style={{ color: 'var(--color-danger)' }} title="Clear all registrations">
+              <RefreshCcw size={14} /> Clear Roster
+            </button>
+          )}
+        </div>
+        <p className="panel-desc">Roster of volunteers who registered through the public sign-up link. Assign tasks and roles in operations accordingly.</p>
+
+        {registrationHook.registeredVolunteers.length === 0 ? (
+          <div className="empty-state" style={{ padding: '24px 0', textAlign: 'center', color: 'var(--text-muted)' }}>
+            <p>No volunteer registrations received yet. Share the sign-up link to collect registrations.</p>
+            <div style={{ marginTop: 12, fontSize: '0.85rem' }}>
+              <strong>Public Link:</strong> <code style={{ background: 'var(--bg-input)', padding: '4px 8px', borderRadius: 4, border: '1px solid var(--border-color)' }}>{window.location.origin + window.location.pathname + '#/register'}</code>
+            </div>
+          </div>
+        ) : (
+          <div className="table-responsive" style={{ maxHeight: '350px', overflowY: 'auto' }}>
+            <table className="shifts-table" style={{ width: '100%' }}>
+              <thead>
+                <tr>
+                  <th>Full Name</th>
+                  <th>Phone Number</th>
+                  <th>Email Address</th>
+                  <th>Registration Date</th>
+                  <th style={{ width: '80px', textAlign: 'center' }}>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {registrationHook.registeredVolunteers.map((vol) => (
+                  <tr key={vol.id}>
+                    <td><strong>{vol.fullName}</strong></td>
+                    <td><span className="shift-time">{vol.phone}</span></td>
+                    <td>{vol.email}</td>
+                    <td><span className="info-chip time">{vol.timestamp}</span></td>
+                    <td style={{ textAlign: 'center' }}>
+                      <button 
+                        className="btn btn-secondary btn-xs" 
+                        onClick={() => registrationHook.deleteRegistration(vol.id)}
+                        title="Remove volunteer"
+                        style={{ color: 'var(--color-danger)' }}
+                      >
+                        <Trash2 size={12} />
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
     </div>
   );
