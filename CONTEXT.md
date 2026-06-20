@@ -21,7 +21,7 @@ All components will reside in feature-specific directories under `src/features/`
 - `features/Dashboard/`: Home overview, stats, event state.
 - `features/Schedule/`: Run of show timeline with filtering & search.
 - `features/VenueMap/`: Interactive room status & allocations.
-- `features/Volunteer/`: Shift assignments, training progress checklist, and useVolunteerRegistration hook for managing public registrations.
+- `features/Volunteer/`: Shift assignments, training progress checklist, useVolunteerRegistration hook (supporting team/event assignments), and EventLineDistribution dashboard visualization.
 - `features/Checklist/`: Persistent material checklists.
 - `features/Budget/`: Interactive budget adjustment tool & Risk Matrix.
 - `features/Schools/`: Schools accreditation status, check-in forms to log accompanying details (students list, teacher/chaperone name, email, and phone), search filters, and dashboard integration.

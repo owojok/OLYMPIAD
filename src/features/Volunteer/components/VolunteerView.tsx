@@ -1,8 +1,16 @@
+/**
+ * Justification: This component manages the complete volunteer portal views, including
+ * interactive role allocations, training track checklist, event shifts assignments,
+ * the new event line distribution timeline, and the registered staff roster table.
+ * It exceeds 250 lines to keep the dashboard view code centralized.
+ */
+
 import React from 'react';
-import { VOLUNTEER_TRAINING } from '../../../data/eventData';
+import { VOLUNTEER_TRAINING, VENUE_DATA } from '../../../data/eventData';
 import { useVolunteerChecklist } from '../hooks/useVolunteerChecklist';
 import type { useVolunteers } from '../hooks/useVolunteers';
 import type { useVolunteerRegistration } from '../hooks/useVolunteerRegistration';
+import { EventLineDistribution } from './EventLineDistribution';
 import { Clock, Award, CheckCircle, RefreshCcw, AlertCircle, ShieldAlert, Trash2 } from 'lucide-react';
 import './Volunteer.css';
 
@@ -14,6 +22,47 @@ interface VolunteerViewProps {
 export const VolunteerView: React.FC<VolunteerViewProps> = ({ volunteerHook, registrationHook }) => {
   const { completedSessions, toggleSession, progressPercent } = useVolunteerChecklist();
   const { roles, totalVolunteers, updateRoleCount, resetRoles, validationError } = volunteerHook;
+
+  // Flatten active rooms/locations from VENUE_DATA
+  const activeRooms = React.useMemo(() => {
+    const roomsList: { id: string; name: string; allocation: string }[] = [];
+    VENUE_DATA.forEach((faculty) => {
+      faculty.floors.forEach((floor) => {
+        floor.rooms.forEach((room) => {
+          if (room.status === 'active') {
+            roomsList.push({
+              id: room.id,
+              name: room.name,
+              allocation: room.allocation
+            });
+          }
+        });
+      });
+    });
+    return roomsList;
+  }, []);
+
+  // Filter rooms for Shift 1 (B / Morning): Exclude Division C only rooms
+  const shift1Rooms = React.useMemo(() => {
+    return activeRooms.filter(
+      (room) =>
+        !room.allocation.toLowerCase().includes('division c') &&
+        !room.allocation.toLowerCase().includes('div c') &&
+        room.id !== 'VET-102' &&
+        room.id !== 'WALK-2'
+    );
+  }, [activeRooms]);
+
+  // Filter rooms for Shift 2 (C / Afternoon): Exclude Division B only rooms
+  const shift2Rooms = React.useMemo(() => {
+    return activeRooms.filter(
+      (room) =>
+        !room.allocation.toLowerCase().includes('division b') &&
+        !room.allocation.toLowerCase().includes('div b') &&
+        room.id !== 'VET-101' &&
+        room.id !== 'WALK-1'
+    );
+  }, [activeRooms]);
 
   const getRatioStatus = () => {
     if (totalVolunteers < 40) {
@@ -198,7 +247,7 @@ export const VolunteerView: React.FC<VolunteerViewProps> = ({ volunteerHook, reg
                 <td><strong>Shift 3</strong></td>
                 <td><span className="shift-time"><Clock size={12} /> 7:00 am — 2:00 pm (Day 2)</span></td>
                 <td><span className="badge badge-primary">Ceremony</span></td>
-                <td>VIP escorts, stage layout assistants, media support, venue restoration</td>
+                <td>VIP ushers, stage layout assistants, media support, venue restoration</td>
               </tr>
             </tbody>
           </table>
@@ -211,6 +260,9 @@ export const VolunteerView: React.FC<VolunteerViewProps> = ({ volunteerHook, reg
           </div>
         </div>
       </div>
+
+      {/* Visual Event Line distribution graph section */}
+      <EventLineDistribution registeredVolunteers={registrationHook.registeredVolunteers} />
 
       {/* Registered Staff Roster Section */}
       <div className="volunteer-registrations-panel glass-panel" style={{ marginTop: 24 }}>
@@ -232,14 +284,16 @@ export const VolunteerView: React.FC<VolunteerViewProps> = ({ volunteerHook, reg
             </div>
           </div>
         ) : (
-          <div className="table-responsive" style={{ maxHeight: '350px', overflowY: 'auto' }}>
+          <div className="table-responsive" style={{ maxHeight: '450px', overflowY: 'auto' }}>
             <table className="shifts-table" style={{ width: '100%' }}>
               <thead>
                 <tr>
                   <th>Full Name</th>
                   <th>Phone Number</th>
                   <th>Email Address</th>
-                  <th>Registration Date</th>
+                  <th>Team Assignment</th>
+                  <th>Shift 1 (Div B)</th>
+                  <th>Shift 2 (Div C)</th>
                   <th style={{ width: '80px', textAlign: 'center' }}>Actions</th>
                 </tr>
               </thead>
@@ -249,7 +303,53 @@ export const VolunteerView: React.FC<VolunteerViewProps> = ({ volunteerHook, reg
                     <td><strong>{vol.fullName}</strong></td>
                     <td><span className="shift-time">{vol.phone}</span></td>
                     <td>{vol.email}</td>
-                    <td><span className="info-chip time">{vol.timestamp}</span></td>
+                    <td>
+                      <select
+                        value={vol.assignedTeam || ''}
+                        onChange={(e) => {
+                          registrationHook.assignTeam(vol.id, e.target.value);
+                        }}
+                      >
+                        <option value="">-- Unassigned --</option>
+                        {roles.map((r) => (
+                          <option key={r.name} value={r.name}>
+                            {r.name}
+                          </option>
+                        ))}
+                      </select>
+                    </td>
+                    <td>
+                      <select
+                        value={vol.assignedEventB || ''}
+                        onChange={(e) => {
+                          registrationHook.assignEventB(vol.id, e.target.value);
+                        }}
+                        style={{ maxWidth: '170px' }}
+                      >
+                        <option value="">-- Unassigned --</option>
+                        {shift1Rooms.map((room) => (
+                          <option key={room.id} value={room.id}>
+                            {room.id} · {room.allocation}
+                          </option>
+                        ))}
+                      </select>
+                    </td>
+                    <td>
+                      <select
+                        value={vol.assignedEventC || ''}
+                        onChange={(e) => {
+                          registrationHook.assignEventC(vol.id, e.target.value);
+                        }}
+                        style={{ maxWidth: '170px' }}
+                      >
+                        <option value="">-- Unassigned --</option>
+                        {shift2Rooms.map((room) => (
+                          <option key={room.id} value={room.id}>
+                            {room.id} · {room.allocation}
+                          </option>
+                        ))}
+                      </select>
+                    </td>
                     <td style={{ textAlign: 'center' }}>
                       <button 
                         className="btn btn-secondary btn-xs" 

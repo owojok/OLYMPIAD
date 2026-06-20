@@ -12,7 +12,7 @@ describe('useVolunteerRegistration Hook', () => {
     act(() => {});
 
     expect(result.current.registeredVolunteers).toEqual(INITIAL_REGISTERED_VOLUNTEERS);
-    expect(result.current.stats.totalRegistered).toBe(9);
+    expect(result.current.stats.totalRegistered).toBe(14);
   });
 
   it('adds a volunteer registration and persists to localStorage', () => {
@@ -23,16 +23,16 @@ describe('useVolunteerRegistration Hook', () => {
       result.current.registerVolunteer('John Smith', '+234 803 123 4567', 'john@gmail.com');
     });
 
-    expect(result.current.registeredVolunteers.length).toBe(10);
-    expect(result.current.stats.totalRegistered).toBe(10);
-    expect(result.current.registeredVolunteers[9].fullName).toBe('John Smith');
-    expect(result.current.registeredVolunteers[9].phone).toBe('+234 803 123 4567');
-    expect(result.current.registeredVolunteers[9].email).toBe('john@gmail.com');
+    expect(result.current.registeredVolunteers.length).toBe(15);
+    expect(result.current.stats.totalRegistered).toBe(15);
+    expect(result.current.registeredVolunteers[14].fullName).toBe('John Smith');
+    expect(result.current.registeredVolunteers[14].phone).toBe('+234 803 123 4567');
+    expect(result.current.registeredVolunteers[14].email).toBe('john@gmail.com');
 
     // Verify localStorage matches
     const stored = JSON.parse(localStorage.getItem('so_registered_volunteers') || '[]');
-    expect(stored.length).toBe(10);
-    expect(stored[9].fullName).toBe('John Smith');
+    expect(stored.length).toBe(15);
+    expect(stored[14].fullName).toBe('John Smith');
   });
 
   it('removes a volunteer registration', () => {
@@ -45,18 +45,18 @@ describe('useVolunteerRegistration Hook', () => {
       result.current.deleteRegistration(targetId);
     });
 
-    expect(result.current.registeredVolunteers.length).toBe(8);
-    expect(result.current.stats.totalRegistered).toBe(8);
+    expect(result.current.registeredVolunteers.length).toBe(13);
+    expect(result.current.stats.totalRegistered).toBe(13);
 
     const stored = JSON.parse(localStorage.getItem('so_registered_volunteers') || '[]');
-    expect(stored.length).toBe(8);
+    expect(stored.length).toBe(13);
   });
 
   it('clears all volunteer registrations', () => {
     const { result } = renderHook(() => useVolunteerRegistration());
     act(() => {});
 
-    expect(result.current.registeredVolunteers.length).toBe(9);
+    expect(result.current.registeredVolunteers.length).toBe(14);
 
     act(() => {
       result.current.clearRegistrations();
@@ -64,5 +64,42 @@ describe('useVolunteerRegistration Hook', () => {
 
     expect(result.current.registeredVolunteers.length).toBe(0);
     expect(result.current.stats.totalRegistered).toBe(0);
+  });
+
+  it('assigns a team to a registered volunteer and persists it', () => {
+    const { result } = renderHook(() => useVolunteerRegistration());
+    act(() => {});
+
+    const targetId = result.current.registeredVolunteers[0].id;
+
+    act(() => {
+      result.current.assignTeam(targetId, 'Competition Judges Assistant');
+    });
+
+    expect(result.current.registeredVolunteers[0].assignedTeam).toBe('Competition Judges Assistant');
+
+    // Verify localStorage persistence
+    const stored = JSON.parse(localStorage.getItem('so_registered_volunteers') || '[]');
+    expect(stored[0].assignedTeam).toBe('Competition Judges Assistant');
+  });
+
+  it('assigns Shift 1 and Shift 2 events to a registered volunteer and persists it', () => {
+    const { result } = renderHook(() => useVolunteerRegistration());
+    act(() => {});
+
+    const targetId = result.current.registeredVolunteers[0].id;
+
+    act(() => {
+      result.current.assignEventB(targetId, 'VET-201');
+      result.current.assignEventC(targetId, 'VET-203');
+    });
+
+    expect(result.current.registeredVolunteers[0].assignedEventB).toBe('VET-201');
+    expect(result.current.registeredVolunteers[0].assignedEventC).toBe('VET-203');
+
+    // Verify localStorage persistence
+    const stored = JSON.parse(localStorage.getItem('so_registered_volunteers') || '[]');
+    expect(stored[0].assignedEventB).toBe('VET-201');
+    expect(stored[0].assignedEventC).toBe('VET-203');
   });
 });

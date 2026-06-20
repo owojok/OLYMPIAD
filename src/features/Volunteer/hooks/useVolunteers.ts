@@ -6,12 +6,21 @@ export const useVolunteers = () => {
   const [roles, setRoles] = useState<VolunteerTeam[]>([]);
   const [validationError, setValidationError] = useState<string | null>(null);
 
-  // Load baseline on mount
+  // Load baseline on mount with migration check for updated teams
   useEffect(() => {
     try {
       const stored = localStorage.getItem('so_volunteer_allocations');
       if (stored) {
-        setRoles(JSON.parse(stored));
+        const parsed = JSON.parse(stored) as VolunteerTeam[];
+        const hasRunners = parsed.some(r => r.name === 'Runners & Logistics');
+        const hasJudgesAssistant = parsed.some(r => r.name === 'Competition Judges Assistant');
+        if (hasRunners || !hasJudgesAssistant) {
+          // Perform automatic migration to updated roles baseline
+          setRoles(VOLUNTEER_ROLES);
+          localStorage.setItem('so_volunteer_allocations', JSON.stringify(VOLUNTEER_ROLES));
+        } else {
+          setRoles(parsed);
+        }
       } else {
         setRoles(VOLUNTEER_ROLES);
       }

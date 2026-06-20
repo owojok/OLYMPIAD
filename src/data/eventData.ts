@@ -546,15 +546,15 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
 ];
 
 export const VOLUNTEER_ROLES: VolunteerTeam[] = [
-  { name: 'Registration Team', count: 5 },
-  { name: 'Ushers & Guides', count: 8 },
-  { name: 'Lab Assistants', count: 10 },
-  { name: 'Runners & Logistics', count: 5 },
-  { name: 'Catering & Refreshment', count: 4 },
-  { name: 'Security Assistants', count: 3 },
-  { name: 'Media & Photography', count: 2 },
+  { name: 'Registration Team', count: 2 },
+  { name: 'Ushers & Guides', count: 4 },
+  { name: 'Lab Assistants', count: 8 },
+  { name: 'Competition Judges Assistant', count: 10 },
+  { name: 'Catering & Refreshment', count: 5 },
+  { name: 'Security Assistants', count: 4 },
+  { name: 'Media & Photography', count: 3 },
   { name: 'First Aid Support', count: 2 },
-  { name: 'Command Center', count: 1 }
+  { name: 'Command Center', count: 2 }
 ];
 
 export const VOLUNTEER_TRAINING = [

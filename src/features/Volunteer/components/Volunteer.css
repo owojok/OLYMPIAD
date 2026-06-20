@@ -286,3 +286,40 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Event Line Distribution Styling */
+.covered-border {
+  border-left: 4px solid var(--color-success) !important;
+}
+
+.uncovered-border {
+  border-left: 4px solid var(--color-warning) !important;
+  background-color: rgba(245, 158, 11, 0.02) !important;
+}
+
+.covered-border:hover {
+  border-color: var(--color-success) !important;
+}
+
+.uncovered-border:hover {
+  border-color: var(--color-warning) !important;
+}
+
+.volunteer-registrations-panel select {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  max-width: 180px;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.volunteer-registrations-panel select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
