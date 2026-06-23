@@ -28,6 +28,9 @@ export const TOURNAMENT_TASKS = [
   'Lab 4 - Ibrahim Lab',
   'Lab 5 - Davou Lab',
   'Lab 6 - Turaki Lab',
+  'Hall cleaning and Setup',
+  'Souvenir for guests',
+  'All communication task, banner printing MC liaison, media house coverage task',
   'Unassigned'
 ];
 
@@ -60,7 +63,7 @@ export const INITIAL_COMMITTEE: CommitteeMember[] = [
     id: 'cm-04',
     name: 'Alfa Eseoghene Sarah',
     role: 'Member',
-    assignedTask: 'School Accreditation & Welcome Desk',
+    assignedTask: 'All communication task, banner printing MC liaison, media house coverage task',
     email: 'SarahA@unijos.edu.ng',
     avatar: 'https://res.cloudinary.com/ddrnyntl9/image/upload/v1773263451/images/v1773263451295-619310173.jpg'
   },
@@ -68,7 +71,7 @@ export const INITIAL_COMMITTEE: CommitteeMember[] = [
     id: 'cm-05',
     name: 'Stanley Ishaku Jampak',
     role: 'Member',
-    assignedTask: 'Judges Liaison & Score Compilation',
+    assignedTask: 'Souvenir for guests',
     email: 'Ishakus@unijos.edu.ng'
   },
   {
@@ -113,7 +116,7 @@ export const INITIAL_COMMITTEE: CommitteeMember[] = [
     id: 'cm-11',
     name: 'Magdalene Gongden',
     role: 'Member',
-    assignedTask: 'Media, Photography & PR',
+    assignedTask: 'Hall cleaning and Setup',
     email: 'Magdalene@unijos.edu.ng',
     avatar: 'https://res.cloudinary.com/ddrnyntl9/image/upload/v1773263393/images/v1773263393141-926342392.jpg'
   },
@@ -189,6 +192,12 @@ export const useCommittee = () => {
             assignedTask = 'Lab 5 - Davou Lab';
           } else if (initial.id === 'cm-10' && (assignedTask === 'Security Liaison & Evacuation Coordinator' || assignedTask === 'Lab 6 - Turaki Lab (No Access)')) {
             assignedTask = 'Lab 6 - Turaki Lab';
+          } else if (initial.id === 'cm-11') {
+            assignedTask = 'Hall cleaning and Setup';
+          } else if (initial.id === 'cm-05') {
+            assignedTask = 'Souvenir for guests';
+          } else if (initial.id === 'cm-04') {
+            assignedTask = 'All communication task, banner printing MC liaison, media house coverage task';
           }
 
           return {

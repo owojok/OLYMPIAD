@@ -1,4 +1,4 @@
-import { Calendar, MapPin, Users, Activity, Sparkles, ShieldAlert, GraduationCap, Award } from 'lucide-react';
+import { Calendar, MapPin, Users, Sparkles, ShieldAlert, GraduationCap, Award } from 'lucide-react';
 import './Dashboard.css';
 
 interface DashboardViewProps {
@@ -103,11 +103,11 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
           <div className="features-list">
             <div className="feature-item">
               <div className="feat-bullet"></div>
-              <div><strong>Division B (JSS):</strong> Day 1 Morning (9:00 am - 12:00 pm). Anatomy, Disease Detectives, Density, Thermodynamics, Battery Buggy, Mystery Architecture, and Dynamic Planet.</div>
+              <div><strong>Division B (JSS):</strong> Day 1 Morning (9:30 am - 11:25 am). Anatomy, Disease Detectives, Density, Thermodynamics, Battery Buggy, Mystery Architecture, and Dynamic Planet.</div>
             </div>
             <div className="feature-item">
               <div className="feat-bullet"></div>
-              <div><strong>Division C (SSS):</strong> Day 1 Afternoon (1:00 pm - 4:00 pm). Chemistry Lab, Anatomy, Circuits, Solar Power, Electric Vehicle, and Dynamic Planet.</div>
+              <div><strong>Division C (SSS):</strong> Day 1 Afternoon (1:00 pm - 2:55 pm). Chemistry Lab, Anatomy, Circuits, Solar Power, Electric Vehicle, and Dynamic Planet.</div>
             </div>
             <div className="feature-item">
               <div className="feat-bullet"></div>
@@ -127,9 +127,6 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             </div>
           </div>
           <div className="quick-buttons">
-            <button className="btn btn-danger" onClick={() => onNavigate('emergency')}>
-              <Activity size={16} /> View Emergency Protocols
-            </button>
             <button className="btn btn-secondary" onClick={() => onNavigate('checklists')}>
               Check Materials Checklist
             </button>

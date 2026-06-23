@@ -233,13 +233,13 @@ export const VolunteerView: React.FC<VolunteerViewProps> = ({ volunteerHook, reg
             <tbody>
               <tr>
                 <td><strong>Shift 1</strong></td>
-                <td><span className="shift-time"><Clock size={12} /> 7:00 am — 12:30 pm (Day 1)</span></td>
+                <td><span className="shift-time"><Clock size={12} /> 7:30 am — 12:00 pm (Day 1)</span></td>
                 <td><span className="badge badge-info">Division B</span></td>
                 <td>Registration, welcome desk, biology/physics lab guides, morning catering</td>
               </tr>
               <tr>
                 <td><strong>Shift 2</strong></td>
-                <td><span className="shift-time"><Clock size={12} /> 12:00 pm — 5:00 pm (Day 1)</span></td>
+                <td><span className="shift-time"><Clock size={12} /> 12:00 pm — 4:00 pm (Day 1)</span></td>
                 <td><span className="badge badge-danger">Division C</span></td>
                 <td>Chemistry lab assistants, physics guides, vehicle workshop, venue sweep</td>
               </tr>
@@ -305,12 +305,11 @@ export const VolunteerView: React.FC<VolunteerViewProps> = ({ volunteerHook, reg
                     <td>{vol.email}</td>
                     <td>
                       <select
-                        value={vol.assignedTeam || ''}
+                        value={vol.assignedTeam || (roles[0] && roles[0].name) || ''}
                         onChange={(e) => {
                           registrationHook.assignTeam(vol.id, e.target.value);
                         }}
                       >
-                        <option value="">-- Unassigned --</option>
                         {roles.map((r) => (
                           <option key={r.name} value={r.name}>
                             {r.name}
@@ -320,13 +319,12 @@ export const VolunteerView: React.FC<VolunteerViewProps> = ({ volunteerHook, reg
                     </td>
                     <td>
                       <select
-                        value={vol.assignedEventB || ''}
+                        value={vol.assignedEventB || (shift1Rooms[0] && shift1Rooms[0].id) || ''}
                         onChange={(e) => {
                           registrationHook.assignEventB(vol.id, e.target.value);
                         }}
                         style={{ maxWidth: '170px' }}
                       >
-                        <option value="">-- Unassigned --</option>
                         {shift1Rooms.map((room) => (
                           <option key={room.id} value={room.id}>
                             {room.id} · {room.allocation}
@@ -336,13 +334,12 @@ export const VolunteerView: React.FC<VolunteerViewProps> = ({ volunteerHook, reg
                     </td>
                     <td>
                       <select
-                        value={vol.assignedEventC || ''}
+                        value={vol.assignedEventC || (shift2Rooms[0] && shift2Rooms[0].id) || ''}
                         onChange={(e) => {
                           registrationHook.assignEventC(vol.id, e.target.value);
                         }}
                         style={{ maxWidth: '170px' }}
                       >
-                        <option value="">-- Unassigned --</option>
                         {shift2Rooms.map((room) => (
                           <option key={room.id} value={room.id}>
                             {room.id} · {room.allocation}

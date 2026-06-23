@@ -189,7 +189,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
   // Day 1 Div B
   {
     id: 'day1-b-01',
-    time: '07:00 am (Day 1)',
+    time: '07:30 am (Day 1)',
     title: 'Core Team Arrival & Venue Activation',
     division: 'B',
     type: 'prep',
@@ -202,7 +202,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
   },
   {
     id: 'day1-b-02',
-    time: '07:30 am (Day 1)',
+    time: '08:00 am (Day 1)',
     title: 'Staff & Volunteer Arrival',
     division: 'B',
     type: 'prep',
@@ -215,7 +215,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
   },
   {
     id: 'day1-b-03',
-    time: '08:00 am (Day 1)',
+    time: '08:30 am (Day 1)',
     title: 'Final Setup Check & Liaisons Ready',
     division: 'B',
     type: 'prep',
@@ -227,7 +227,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
   },
   {
     id: 'day1-b-04',
-    time: '08:30 am (Day 1)',
+    time: '09:00 am (Day 1)',
     title: 'School Buses & Teams Arrival',
     division: 'B',
     type: 'prep',
@@ -239,7 +239,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
   },
   {
     id: 'day1-b-05',
-    time: '09:00 am (Day 1)',
+    time: '09:30 am (Day 1)',
     title: 'Event Start — Registration & Accreditation',
     division: 'B',
     type: 'other',
@@ -247,13 +247,13 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     details: [
       'Accreditation: Queue by school, verify team lists, issue color-coded (BLUE) student ID badges, issue coach badges',
       'Materials: Hand out printed schedules, collect emergency forms, and photo releases',
-      'Late Arrival: After 09:15 am, check in at VET-103 (Command Center), liaison phone calls, log in report',
+      'Late Arrival: After 09:45 am, check in at VET-103 (Command Center), liaison phone calls, log in report',
       'Staffing: 4 registration volunteers, 2 queue management, 4 directional guides (Total: 10)'
     ]
   },
   {
     id: 'day1-b-06',
-    time: '09:15 am (Day 1)',
+    time: '09:45 am (Day 1)',
     title: 'Registration Wind-down & Assembly',
     division: 'B',
     type: 'prep',
@@ -266,7 +266,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
   },
   {
     id: 'day1-b-07',
-    time: '09:30 am (Day 1)',
+    time: '10:00 am (Day 1)',
     title: 'Opening & Teacher Briefings',
     division: 'B',
     type: 'ceremony',
@@ -278,7 +278,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
   },
   {
     id: 'day1-b-08',
-    time: '09:45 am (Day 1)',
+    time: '10:20 am (Day 1)',
     title: 'Competition Briefing & Volunteer Placements',
     division: 'B',
     type: 'prep',
@@ -290,26 +290,26 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
   },
   {
     id: 'day1-b-09',
-    time: '10:00 am — 12:00 pm (Day 1)',
+    time: '10:35 am — 11:25 am (Day 1)',
     title: 'Competition Session (Division B)',
     division: 'B',
     type: 'competition',
     location: 'Labs & Rooms',
     details: [
       'Rotation system active: Groups divide, guided by volunteers through rounds with transitions',
-      'Lab 1 (VET-201): Tabitha Chemistry — Anatomy & Physiology',
-      'Lab 2 (VET-202): Iliya Biology — Disease Detectives',
-      'Lab 5 (VET-302): Davou Lab — Density Lab',
-      'Lab 6 (VET-303): Turaki Lab — Thermodynamics',
-      'Classroom 1 (VET-107): Classroom 1 — Battery Buggy',
-      'Classroom 2 (VET-108): Classroom 2 — Mystery Architecture',
-      'Classroom 3 (VET-109): Classroom 3 — Dynamic Planet',
+      'Lab 1 (VET-201): Tabitha Chemistry — Anatomy & Physiology (50 mins)',
+      'Lab 2 (VET-202): Iliya Biology — Disease Detectives (50 mins)',
+      'Lab 5 (VET-302): Davou Lab — Density Lab (50 mins)',
+      'Lab 6 (VET-303): Turaki Lab — Thermodynamics (50 mins)',
+      'Classroom 1 (VET-107): Classroom 1 — Battery Buggy (50 mins)',
+      'Classroom 2 (VET-108): Classroom 2 — Mystery Architecture (50 mins)',
+      'Classroom 3 (VET-109): Classroom 3 — Dynamic Planet (50 mins)',
       'Continuous Operations: Water/snacks, escorted toilet breaks, first aid on standby, real-time score compilation'
     ]
   },
   {
     id: 'day1-b-10',
-    time: '12:00 pm (Day 1)',
+    time: '11:25 am (Day 1)',
     title: 'Division B Dismissal & Transition Prep',
     division: 'B',
     type: 'dismissal',
@@ -322,7 +322,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
   // Day 1 Div C
   {
     id: 'day1-c-01',
-    time: '12:00 pm — 12:30 pm (Day 1)',
+    time: '11:25 am — 12:30 pm (Day 1)',
     title: 'Lunch Break & Transition',
     division: 'C',
     type: 'prep',
@@ -381,7 +381,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
   },
   {
     id: 'day1-c-06',
-    time: '01:45 pm (Day 1)',
+    time: '01:50 pm (Day 1)',
     title: 'Format Briefing & Placement',
     division: 'C',
     type: 'prep',
@@ -392,25 +392,25 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
   },
   {
     id: 'day1-c-07',
-    time: '02:00 pm — 04:00 pm (Day 1)',
+    time: '02:05 pm — 02:55 pm (Day 1)',
     title: 'Competition Session (Division C)',
     division: 'C',
     type: 'competition',
     location: 'Labs & Rooms',
     details: [
       'Rotation active: 20-25 minute rounds with 5-minute moves',
-      'Lab 3 (VET-203): Jennifer Chemistry — Anatomy & Physiology',
-      'Lab 4 (VET-301): Ibrahim Lab — Chemistry Lab Event',
-      'Lab 5 (VET-302): Davou Lab — Circuit Lab',
-      'Lab 6 (VET-303): Turaki Lab — Solar Power',
-      'Classroom 1 (VET-107): Classroom 1 — Electric Vehicle',
-      'Classroom 3 (VET-109): Classroom 3 — Dynamic Planet',
+      'Lab 3 (VET-203): Jennifer Chemistry — Anatomy & Physiology (50 mins)',
+      'Lab 4 (VET-301): Ibrahim Lab — Chemistry Lab Event (50 mins)',
+      'Lab 5 (VET-302): Davou Lab — Circuit Lab (50 mins)',
+      'Lab 6 (VET-303): Turaki Lab — Solar Power (50 mins)',
+      'Classroom 1 (VET-107): Classroom 1 — Electric Vehicle (50 mins)',
+      'Classroom 3 (VET-109): Classroom 3 — Dynamic Planet (50 mins)',
       'Continuous Operations: Catering, medical standby, score submissions and verification'
     ]
   },
   {
     id: 'day1-c-08',
-    time: '04:00 pm (Day 1)',
+    time: '02:55 pm (Day 1)',
     title: 'Division C Competition Ends & Security Sweep',
     division: 'C',
     type: 'dismissal',
@@ -422,7 +422,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
   },
   {
     id: 'day1-c-09',
-    time: '05:00 pm (Day 1)',
+    time: '04:00 pm (Day 1)',
     title: 'Day 1 Wrap-up & Lockdown',
     division: 'C',
     type: 'other',

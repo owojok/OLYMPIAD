@@ -11,7 +11,6 @@ import {
   MapPin, 
   Users, 
   CheckSquare, 
-  ShieldAlert, 
   Menu, 
   Search, 
   Sun, 
@@ -28,7 +27,6 @@ import { VenueView, useVenues } from './features/VenueMap';
 import { VolunteerView, useVolunteers, useVolunteerRegistration, VolunteerRegisterForm } from './features/Volunteer';
 import { ChecklistView } from './features/Checklist';
 import { BudgetView } from './features/Budget';
-import { EmergencyView } from './features/Emergency';
 import { SchoolsView, useSchools } from './features/Schools';
 import { JudgesView, useJudges } from './features/Judges';
 import { PlanningCommitteeView, useCommittee } from './features/PlanningCommittee';
@@ -181,7 +179,7 @@ function App() {
             category: 'Contact',
             title: role,
             subtitle: number,
-            tab: 'emergency'
+            tab: 'dashboard'
           });
         }
       });
@@ -280,8 +278,6 @@ function App() {
         return <PlanningCommitteeView committeeHook={committeeHook} />;
       case 'budget':
         return <BudgetView />;
-      case 'emergency':
-        return <EmergencyView />;
       default:
         return (
           <DashboardView 
@@ -304,8 +300,7 @@ function App() {
     { id: 'judges', label: 'Judges Roster', icon: <Award size={18} /> },
     { id: 'checklists', label: 'Checklist Center', icon: <CheckSquare size={18} /> },
     { id: 'schools', label: 'Schools check-in', icon: <GraduationCap size={18} /> },
-    { id: 'committee', label: 'Committee Tasks', icon: <UserCheck size={18} /> },
-    { id: 'emergency', label: 'Emergency Hub', icon: <ShieldAlert size={18} /> }
+    { id: 'committee', label: 'Committee Tasks', icon: <UserCheck size={18} /> }
   ];
 
   if (activeTab === 'register') {

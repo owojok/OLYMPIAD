@@ -25,7 +25,9 @@ export const INITIAL_REGISTERED_VOLUNTEERS: RegisteredVolunteer[] = [
   { id: 'reg-init-11', fullName: 'Esther Enuwa Eyimonye', phone: '07063776975', email: 'esther.eyimonye@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'Lab Assistants', assignedEventB: 'VET-303', assignedEventC: 'VET-303' },
   { id: 'reg-init-12', fullName: 'John Meshach Moses', phone: '08085275586', email: 'john.moses@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'Lab Assistants', assignedEventB: 'VET-303', assignedEventC: 'VET-303' },
   { id: 'reg-init-13', fullName: 'Winifred Ojima Zakari', phone: '08115306430', email: 'winifred.zakari@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'Ushers & Guides', assignedEventB: 'VET-107', assignedEventC: 'VET-107' },
-  { id: 'reg-init-14', fullName: 'Abdulsalam Adesina Ayoade', phone: '08077662984', email: 'abdulsalam.ayoade@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'Ushers & Guides', assignedEventB: 'VET-107', assignedEventC: 'VET-107' }
+  { id: 'reg-init-14', fullName: 'Abdulsalam Adesina Ayoade', phone: '08077662984', email: 'abdulsalam.ayoade@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'Ushers & Guides', assignedEventB: 'VET-107', assignedEventC: 'VET-107' },
+  { id: 'reg-init-15', fullName: 'Michael Eka Emmanuel', phone: '08060536556', email: 'michael.emmanuel@gmail.com', timestamp: '06/23/2026 01:38 AM', assignedTeam: 'Command Center', assignedEventB: 'VET-103', assignedEventC: 'VET-103' },
+  { id: 'reg-init-16', fullName: 'Azaachia Jennifer inyaregh', phone: '09039355869', email: 'jennifer.azaachia@gmail.com', timestamp: '06/23/2026 01:38 AM', assignedTeam: 'First Aid Support', assignedEventB: 'VET-105', assignedEventC: 'VET-105' }
 ];
 
 export const useVolunteerRegistration = () => {
@@ -36,19 +38,25 @@ export const useVolunteerRegistration = () => {
     try {
       const stored = localStorage.getItem('so_registered_volunteers');
       if (stored) {
-        const parsed = JSON.parse(stored) as RegisteredVolunteer[];
-        // Trigger migration if Iliya or Agnes is present as a volunteer, if NAT- events exist, or if unallocated default entries exist
+        const rawParsed = JSON.parse(stored) as RegisteredVolunteer[];
+        const parsed = rawParsed.map(vol => ({
+          ...vol,
+          assignedTeam: vol.assignedTeam || 'Ushers & Guides',
+          assignedEventB: vol.assignedEventB || 'VET-107',
+          assignedEventC: vol.assignedEventC || 'VET-107'
+        }));
         const hasAgnesAsVolunteer = parsed.some(vol => vol.fullName.toLowerCase() === 'agnes longshal');
         const hasIliyaAsVolunteer = parsed.some(vol => vol.fullName.toLowerCase() === 'iliya david gideon');
-        const hasLegacyNatEvent = parsed.some(
-          (vol) => (vol.assignedEventB?.startsWith('NAT-') || vol.assignedEventC?.startsWith('NAT-'))
-        );
-        const needsAssignmentMigration = hasAgnesAsVolunteer || hasIliyaAsVolunteer || hasLegacyNatEvent || INITIAL_REGISTERED_VOLUNTEERS.some(
-          (init) => {
-            const match = parsed.find((vol) => vol.fullName.toLowerCase() === init.fullName.toLowerCase() || vol.phone === init.phone);
-            return match && (!match.assignedEventB || !match.assignedEventC || match.assignedTeam !== init.assignedTeam);
-          }
-        );
+        const hasLegacyNatEvent = parsed.some(vol => vol.assignedEventB?.startsWith('NAT-') || vol.assignedEventC?.startsWith('NAT-'));
+        const parsedDefaults = parsed.filter(vol => vol.id.startsWith('reg-init-'));
+        const needsAssignmentMigration = hasAgnesAsVolunteer || hasIliyaAsVolunteer || hasLegacyNatEvent || 
+          parsedDefaults.length !== INITIAL_REGISTERED_VOLUNTEERS.length ||
+          INITIAL_REGISTERED_VOLUNTEERS.some(
+            (init) => {
+              const match = parsed.find((vol) => vol.fullName.toLowerCase() === init.fullName.toLowerCase() || vol.phone === init.phone);
+              return match && (!match.assignedEventB || !match.assignedEventC || match.assignedTeam !== init.assignedTeam);
+            }
+          );
 
         if (needsAssignmentMigration) {
           // Remove Iliya and Agnes, rewrite default entries, and clean up NAT events for custom signups
@@ -59,8 +67,9 @@ export const useVolunteerRegistration = () => {
           const customSignups = filteredParsed.filter(vol => !vol.id.startsWith('reg-init-')).map(vol => {
             return {
               ...vol,
-              assignedEventB: vol.assignedEventB?.startsWith('NAT-') ? 'VET-103' : vol.assignedEventB,
-              assignedEventC: vol.assignedEventC?.startsWith('NAT-') ? 'VET-103' : vol.assignedEventC
+              assignedTeam: vol.assignedTeam || 'Ushers & Guides',
+              assignedEventB: (vol.assignedEventB?.startsWith('NAT-') || !vol.assignedEventB) ? 'VET-103' : vol.assignedEventB,
+              assignedEventC: (vol.assignedEventC?.startsWith('NAT-') || !vol.assignedEventC) ? 'VET-103' : vol.assignedEventC
             };
           });
           const migrated = [...INITIAL_REGISTERED_VOLUNTEERS, ...customSignups];
@@ -103,7 +112,10 @@ export const useVolunteerRegistration = () => {
       fullName: fullName.trim(),
       phone: phone.trim(),
       email: email.trim(),
-      timestamp: new Date().toLocaleDateString() + ' ' + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      timestamp: new Date().toLocaleDateString() + ' ' + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+      assignedTeam: 'Ushers & Guides', // Default role to ensure no unassigned role (R11)
+      assignedEventB: 'VET-107',       // Default Shift B room
+      assignedEventC: 'VET-107'        // Default Shift C room
     };
 
     setRegisteredVolunteers((prev) => {
