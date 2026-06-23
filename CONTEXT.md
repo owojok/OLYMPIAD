@@ -30,3 +30,6 @@ All components will reside in feature-specific directories under `src/features/`
 - `features/Emergency/`: Visual security guidelines & interactive contact lists.
 Each feature will export its public API via its own `index.ts`.
 
+## Global Search Fix (June 2026)
+- **Problem**: Global search would fail/freeze when committee members, rooms, or other entities had missing or undefined fields (such as `assignedTask` or `allocation`) in `localStorage` due to stale schemas.
+- **Solution**: Refactored the search indexing block in [App.tsx](file:///c:/Projects/olymipiad/src/App.tsx) to perform comprehensive null/type checks on all fields before calling string transformations, ensuring absolute robustness. Added integration tests in [App.test.tsx](file:///c:/Projects/olymipiad/src/App.test.tsx).

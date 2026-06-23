@@ -10,10 +10,10 @@ describe('useCommittee Hook', () => {
   it('initializes with baseline committee members', () => {
     const { result } = renderHook(() => useCommittee());
 
-    expect(result.current.members.length).toBe(15);
+    expect(result.current.members.length).toBe(17);
     
     const lead = result.current.members.find(m => m.role === 'Overall Lead');
-    expect(lead?.name).toBe('Prof. Sarah Benjamin Lwahas');
+    expect(lead?.name).toBe('Prof. Sarah Lawhas');
     expect(lead?.assignedTask).toBe('Overall Tournament Coordination');
 
     const subLead = result.current.members.find(m => m.role === 'Sub-Lead');
@@ -49,8 +49,8 @@ describe('useCommittee Hook', () => {
     const { result } = renderHook(() => useCommittee());
     act(() => {});
 
-    expect(result.current.stats.total).toBe(15);
-    expect(result.current.stats.assigned).toBe(14); // 14 assigned, Yakubu Gomos is unassigned
+    expect(result.current.stats.total).toBe(17);
+    expect(result.current.stats.assigned).toBe(16); // 16 assigned, Yakubu Gomos is unassigned
     expect(result.current.stats.unassigned).toBe(1);
 
     const targetMember = result.current.members.find(m => m.name === 'Yakubu Gomos')!;
@@ -59,7 +59,7 @@ describe('useCommittee Hook', () => {
       result.current.reassignTask(targetMember.id, 'Catering Coordinator');
     });
 
-    expect(result.current.stats.assigned).toBe(15);
+    expect(result.current.stats.assigned).toBe(17);
     expect(result.current.stats.unassigned).toBe(0);
   });
 

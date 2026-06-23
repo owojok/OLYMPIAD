@@ -339,8 +339,7 @@ export const SchoolsView: React.FC<SchoolsViewProps> = ({ schoolHook }) => {
                 <Info size={20} className="notice-icon" style={{ flexShrink: 0 }} />
                 <div style={{ fontSize: '0.85rem' }}>
                   <strong>Late Arrival Notice:</strong>
-                  <p style={{ marginTop: 4 }}>Registered teams checking in after 09:15 am (Division B) or 01:15 pm (Division C) must be redirected to the <strong>Registration Overflow Desk</strong> in <strong>Room NAT-101</strong>.</p>
-                </div>
+                  <p style={{ marginTop: 4 }}>Registered teams checking in after 09:15 am (Division B) or 01:15 pm (Division C) must be redirected to the <strong>Registration Command Center</strong> in <strong>Room VET-103</strong>.</p>                </div>
               </div>
               
               <div className="notice-card badge-primary" style={{ display: 'flex', gap: 10, padding: 12, borderRadius: 8, marginTop: 12 }}>

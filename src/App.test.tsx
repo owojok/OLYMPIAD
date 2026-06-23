@@ -62,4 +62,30 @@ describe('App Integration', () => {
     
     window.location.hash = '';
   });
+
+  it('performs global search successfully', () => {
+    render(<App />);
+    const searchInput = screen.getByPlaceholderText(/global search\.\.\./i);
+    
+    // Type 'Roland' (which should match Roland Hoomkwap in judges)
+    fireEvent.change(searchInput, { target: { value: 'Roland' } });
+    
+    // Check if the results overlay is rendered
+    expect(screen.getByText('Matches Found (1)')).toBeInTheDocument();
+    expect(screen.getByText('Roland Hoomkwap')).toBeInTheDocument();
+    expect(screen.getByText(/Assigned: Anatomy/)).toBeInTheDocument();
+  });
+
+  it('does not crash when localStorage committee members have missing/undefined fields', () => {
+    localStorage.setItem('so_committee_members', JSON.stringify([
+      { id: 'cm-01', name: 'Prof. Sarah Lawhas', role: 'Overall Lead' } // assignedTask is missing!
+    ]));
+    render(<App />);
+    const searchInput = screen.getByPlaceholderText(/global search\.\.\./i);
+    
+    // This should not throw an error
+    fireEvent.change(searchInput, { target: { value: 'Sarah' } });
+    
+    expect(screen.getByText('Matches Found (2)')).toBeInTheDocument();
+  });
 });

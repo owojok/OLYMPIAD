@@ -58,8 +58,8 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             <MapPin size={22} />
           </div>
           <div className="stat-info">
-            <h3>3 Major Venues</h3>
-            <p className="stat-desc">Vet Science, Natural Science & Outdoor</p>
+            <h3>2 Major Venues</h3>
+            <p className="stat-desc">Vet Science & Outdoor Areas</p>
           </div>
         </div>
 

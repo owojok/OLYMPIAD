@@ -67,14 +67,17 @@ export const VENUE_DATA: VenueLayout[] = [
           { id: 'VET-104', name: 'Room VET-104', type: 'Office', allocation: 'Judges / Scorers Room (Secure)', status: 'active' },
           { id: 'VET-105', name: 'Room VET-105', type: 'Medical', allocation: 'First Aid Station', status: 'active' },
           { id: 'VET-106', name: 'Room VET-106', type: 'Media', allocation: 'Media / ICT Room', status: 'active' },
+          { id: 'VET-107', name: 'Classroom 1', type: 'Classroom', allocation: 'Div B: Battery Buggy / Div C: Electric Vehicle', status: 'active' },
+          { id: 'VET-108', name: 'Classroom 2', type: 'Classroom', allocation: 'Div B: Mystery Architecture', status: 'active' },
+          { id: 'VET-109', name: 'Classroom 3', type: 'Classroom', allocation: 'Div B: Dynamic Planet / Div C: Dynamic Planet', status: 'active' },
         ]
       },
       {
         floor: 'First Floor',
         rooms: [
-          { id: 'VET-201', name: 'Lab VET-201', type: 'Biology Lab', allocation: 'Division B: Anatomy & Physiology', status: 'active' },
-          { id: 'VET-202', name: 'Lab VET-202', type: 'Biology Lab', allocation: 'Division B: Disease Detectives', status: 'active' },
-          { id: 'VET-203', name: 'Lab VET-203', type: 'Biology Lab', allocation: 'Division C: Anatomy & Physiology', status: 'active' },
+          { id: 'VET-201', name: 'Lab 1 - Tabitha Chemistry', type: 'Chemistry Lab', allocation: 'Div B: Anatomy & Physiology', status: 'active' },
+          { id: 'VET-202', name: 'Lab 2 - Iliya Biology', type: 'Biology Lab', allocation: 'Div B: Disease Detectives', status: 'active' },
+          { id: 'VET-203', name: 'Lab 3 - Jennifer Chemistry', type: 'Chemistry Lab', allocation: 'Div C: Anatomy & Physiology', status: 'active' },
           { id: 'VET-204', name: 'Room VET-204', type: 'Rest Area', allocation: 'Supervisor Rest Area', status: 'active' },
           { id: 'VET-205', name: 'Room VET-205', type: 'Storage', allocation: 'Equipment Storage', status: 'active' },
         ]
@@ -82,53 +85,9 @@ export const VENUE_DATA: VenueLayout[] = [
       {
         floor: 'Second Floor',
         rooms: [
-          { id: 'VET-301', name: 'Lab VET-301', type: 'Chemistry Lab', allocation: 'Division C: Chemistry Lab Event', status: 'active' },
-          { id: 'VET-302', name: 'Lab VET-302', type: 'Chemistry Prep', allocation: 'Chemistry Prep Room', status: 'active' },
-          { id: 'VET-303', name: 'Room VET-303', type: 'Office', allocation: 'Results Compilation Room', status: 'active' },
-        ]
-      }
-    ]
-  },
-  {
-    name: 'Faculty of Natural Sciences',
-    floors: [
-      {
-        floor: 'Ground Floor',
-        rooms: [
-          { id: 'NAT-101', name: 'Room NAT-101', type: 'Registration', allocation: 'Registration Overflow / Late Arrivals', status: 'active' },
-          { id: 'NAT-102', name: 'Room NAT-102', type: 'Catering', allocation: 'Catering / Refreshment Station', status: 'active' },
-          { id: 'NAT-103', name: 'Room NAT-103', type: 'Security', allocation: 'Security Office', status: 'active' },
-          { id: 'NAT-104', name: 'Room NAT-104', type: 'Lost & Found', allocation: 'Lost & Found', status: 'active' },
-          { id: 'NAT-H1', name: 'Hall NAT-H1', type: 'Assembly Hall', allocation: 'Assembly Hall / Opening Briefing (Division B)', status: 'active' },
-          { id: 'NAT-H2', name: 'Hall NAT-H2', type: 'Assembly Hall', allocation: 'Assembly Hall / Opening Briefing (Division C)', status: 'active' },
-        ]
-      },
-      {
-        floor: 'First Floor',
-        rooms: [
-          { id: 'NAT-201', name: 'Lab NAT-201', type: 'Physics Lab', allocation: 'Division B: Density Lab', status: 'active' },
-          { id: 'NAT-202', name: 'Lab NAT-202', type: 'Physics Lab', allocation: 'Division B: Thermodynamics', status: 'active' },
-          { id: 'NAT-203', name: 'Lab NAT-203', type: 'Physics Lab', allocation: 'Division C: Circuit Lab', status: 'active' },
-          { id: 'NAT-204', name: 'Lab NAT-204', type: 'Physics Lab', allocation: 'Division C: Solar Power', status: 'active' },
-          { id: 'NAT-205', name: 'Room NAT-205', type: 'Calibration', allocation: 'Equipment Calibration Station', status: 'active' },
-        ]
-      },
-      {
-        floor: 'Second Floor',
-        rooms: [
-          { id: 'NAT-301', name: 'Workshop NAT-301', type: 'Engineering Workshop', allocation: 'Division B: Battery Buggy', status: 'active' },
-          { id: 'NAT-302', name: 'Workshop NAT-302', type: 'Engineering Workshop', allocation: 'Division B: Mystery Architecture', status: 'active' },
-          { id: 'NAT-303', name: 'Workshop NAT-303', type: 'Engineering Workshop', allocation: 'Division C: Electric Vehicle', status: 'active' },
-          { id: 'NAT-304', name: 'Room NAT-304', type: 'Storage', allocation: 'Tools & Materials Storage', status: 'active' },
-        ]
-      },
-      {
-        floor: 'Third Floor',
-        rooms: [
-          { id: 'NAT-401', name: 'Room NAT-401', type: 'Classroom', allocation: 'Division B: Dynamic Planet', status: 'active' },
-          { id: 'NAT-402', name: 'Room NAT-402', type: 'Classroom', allocation: 'Division C: Dynamic Planet', status: 'active' },
-          { id: 'NAT-403', name: 'Room NAT-403', type: 'Office', allocation: 'Data Entry / Scoring Station', status: 'active' },
-          { id: 'NAT-404', name: 'Room NAT-404', type: 'Meeting Room', allocation: 'VIP Meeting Room / Guest Reception / Coach Briefing', status: 'active' },
+          { id: 'VET-301', name: 'Lab 4 - Ibrahim Lab', type: 'Chemistry Lab', allocation: 'Div C: Chemistry Lab Event', status: 'active' },
+          { id: 'VET-302', name: 'Lab 5 - Davou Lab', type: 'Physics Lab', allocation: 'Div B: Density Lab / Div C: Circuit Lab', status: 'active' },
+          { id: 'VET-303', name: 'Lab 6 - Turaki Lab', type: 'Physics Lab', allocation: 'Div B: Thermodynamics / Div C: Solar Power', status: 'active' },
         ]
       }
     ]
@@ -179,7 +138,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
       'Signage installation (directional arrows, room labels, banners)',
       'Lab equipment testing & calibration',
       'Furniture arrangement (desks, chairs, judging tables)',
-      'Audio-visual equipment setup in all halls',
+      'Audio-visual equipment setup in Command Center & labs',
       'Wi-Fi/network testing in all rooms',
       'First aid stations stocked',
       'Security walk-through'
@@ -194,7 +153,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     location: 'Command Center (VET-103)',
     details: [
       'Volunteer briefing & role assignment',
-      'Walk-through of all routes',
+      'Walk-through of all routes in Faculty of Veterinary Science',
       'Radio/communication device testing',
       'Emergency procedure review',
       'Refreshment station setup'
@@ -262,7 +221,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     type: 'prep',
     location: 'All Venues',
     details: [
-      'Event Director walk-through, signage verification, clean restroom check, parking attendants active, first aid ready',
+      'Event Director walk-through, signage verification, clean restroom check, parking attendants ready, first aid ready',
       'School Liaison Team: Contact list verified, bus arrival tracking begins, parking team positioned'
     ]
   },
@@ -288,7 +247,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     details: [
       'Accreditation: Queue by school, verify team lists, issue color-coded (BLUE) student ID badges, issue coach badges',
       'Materials: Hand out printed schedules, collect emergency forms, and photo releases',
-      'Late Arrival: After 09:15 am, check in at NAT-101 (overflow), liaison phone calls, log in report',
+      'Late Arrival: After 09:15 am, check in at VET-103 (Command Center), liaison phone calls, log in report',
       'Staffing: 4 registration volunteers, 2 queue management, 4 directional guides (Total: 10)'
     ]
   },
@@ -298,10 +257,10 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Registration Wind-down & Assembly',
     division: 'B',
     type: 'prep',
-    location: 'Hall NAT-H1',
+    location: 'Command Center (VET-103)',
     details: [
       'Registration desk transitions to info point; report missing schools to Director',
-      'Students escorted to Assembly Hall NAT-H1, seated by school in pre-marked rows with 4 ushers',
+      'Students escorted to Command Center (VET-103), seated by school in pre-marked rows with 4 ushers',
       'Catering & Security final head counts and coverage checks'
     ]
   },
@@ -311,10 +270,10 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Opening & Teacher Briefings',
     division: 'B',
     type: 'ceremony',
-    location: 'Hall NAT-H1 & Room NAT-404',
+    location: 'VET-103 & Room VET-106',
     details: [
-      'Opening Briefing (NAT-H1): Welcomes, house rules, safety exits briefing, competition format overview, Q&A (5 mins)',
-      'Teacher/Coach Briefing (NAT-404): Parallel session outlining viewing areas, refreshment schedule, Day 2 info'
+      'Opening Briefing (VET-103): Welcomes, house rules, safety exits briefing, competition format overview, Q&A (5 mins)',
+      'Teacher/Coach Briefing (VET-106): Parallel session outlining viewing areas, refreshment schedule, Day 2 info'
     ]
   },
   {
@@ -323,9 +282,9 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Competition Briefing & Volunteer Placements',
     division: 'B',
     type: 'prep',
-    location: 'Hall NAT-H1',
+    location: 'Command Center (VET-103)',
     details: [
-      'Format & rotation system explanation, time limits (20-25 mins) per station, scoring guidelines',
+      'Format & rotation system explanation, time limits per station, scoring guidelines',
       'Volunteers final station check-ins via radio'
     ]
   },
@@ -335,13 +294,16 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Competition Session (Division B)',
     division: 'B',
     type: 'competition',
-    location: 'Labs & Workshops',
+    location: 'Labs & Rooms',
     details: [
-      'Rotation system active: Groups divide, guided by volunteers through 20-minute rounds with 5-minute transitions',
-      'Biology Lab (VET-201/202): Anatomy & Physiology, Disease Detectives. Capacity: 20, 2 Judges, 4 Volunteers, microscopes',
-      'Physics Lab (NAT-201/202): Density Lab, Thermodynamics. Capacity: 20, 2 Judges, 4 Volunteers, balances/thermometers',
-      'Engineering Workshop (NAT-301/302): Battery Buggy, Mystery Architecture. Capacity: 15, 2 Judges, 4 Volunteers, motors/batteries',
-      'Management Sciences (NAT-401): Dynamic Planet. Capacity: 25, 2 Judges, 3 Volunteers, maps/data sheets',
+      'Rotation system active: Groups divide, guided by volunteers through rounds with transitions',
+      'Lab 1 (VET-201): Tabitha Chemistry — Anatomy & Physiology',
+      'Lab 2 (VET-202): Iliya Biology — Disease Detectives',
+      'Lab 5 (VET-302): Davou Lab — Density Lab',
+      'Lab 6 (VET-303): Turaki Lab — Thermodynamics',
+      'Classroom 1 (VET-107): Classroom 1 — Battery Buggy',
+      'Classroom 2 (VET-108): Classroom 2 — Mystery Architecture',
+      'Classroom 3 (VET-109): Classroom 3 — Dynamic Planet',
       'Continuous Operations: Water/snacks, escorted toilet breaks, first aid on standby, real-time score compilation'
     ]
   },
@@ -351,9 +313,9 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Division B Dismissal & Transition Prep',
     division: 'B',
     type: 'dismissal',
-    location: 'Hall NAT-H1',
+    location: 'Command Center (VET-103)',
     details: [
-      'Students assemble at NAT-H1, return borrowed equipment, badges collected/gifted, bus loading begins',
+      'Students assemble at VET-103, return borrowed equipment, badges collected/gifted, bus loading begins',
       'Venue Reset: Labs cleaned & restocked, sensors recalibrated, scores compiled & locked, volunteer break'
     ]
   },
@@ -391,7 +353,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     location: 'Room VET-102',
     details: [
       'Accreditation: Verify teams, issue color-coded (RED) ID badges, schedules, and collect emergency sheets',
-      'Late arrivals processed at NAT-101'
+      'Late arrivals processed at VET-103 (Command Center)'
     ]
   },
   {
@@ -400,9 +362,9 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Registration Wind-down & Assembly',
     division: 'C',
     type: 'prep',
-    location: 'Hall NAT-H2',
+    location: 'Command Center (VET-103)',
     details: [
-      'Students register and transition to Assembly Hall NAT-H2, ushered by volunteers'
+      'Students register and transition to Command Center VET-103, ushered by volunteers'
     ]
   },
   {
@@ -411,10 +373,10 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Opening & Teacher Briefings (Division C)',
     division: 'C',
     type: 'ceremony',
-    location: 'Hall NAT-H2 & Room NAT-404',
+    location: 'VET-103 & Room VET-106',
     details: [
-      'Opening Briefing (NAT-H2): Welcomes, house rules, safety exits, SSS competition rules overview, Q&A',
-      'Teacher/Coach Briefing (NAT-404): Viewing spots, catering schedules, emergency procedures'
+      'Opening Briefing (VET-103): Welcomes, house rules, safety exits, SSS competition rules overview, Q&A',
+      'Teacher/Coach Briefing (VET-106): Viewing spots, catering schedules, emergency procedures'
     ]
   },
   {
@@ -423,7 +385,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Format Briefing & Placement',
     division: 'C',
     type: 'prep',
-    location: 'Hall NAT-H2',
+    location: 'Command Center (VET-103)',
     details: [
       'Rotation sequence detailed, group guides assigned, volunteers complete final radio checks'
     ]
@@ -434,14 +396,15 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Competition Session (Division C)',
     division: 'C',
     type: 'competition',
-    location: 'Labs & Workshops',
+    location: 'Labs & Rooms',
     details: [
       'Rotation active: 20-25 minute rounds with 5-minute moves',
-      'Biology Lab (VET-203): Anatomy & Physiology. Capacity: 20, 2 Judges, 3 Volunteers, advanced specimens',
-      'Chemistry Lab (VET-301): Chemistry Lab Event. Capacity: 20, 2 Judges, 3 Volunteers, glassware/chemicals. Chemical Safety Officer on duty',
-      'Physics Lab (NAT-203/204): Circuit Lab, Solar Power. Capacity: 20, 2 Judges, 4 Volunteers, boards/multimeters',
-      'Management Sciences (NAT-402): Dynamic Planet. Capacity: 25, 2 Judges, 3 Volunteers, advanced data sets',
-      'Engineering Workshop (NAT-303): Electric Vehicle. Capacity: 15, 2 Judges, 3 Volunteers, motors/chassis. 30-min rounds',
+      'Lab 3 (VET-203): Jennifer Chemistry — Anatomy & Physiology',
+      'Lab 4 (VET-301): Ibrahim Lab — Chemistry Lab Event',
+      'Lab 5 (VET-302): Davou Lab — Circuit Lab',
+      'Lab 6 (VET-303): Turaki Lab — Solar Power',
+      'Classroom 1 (VET-107): Classroom 1 — Electric Vehicle',
+      'Classroom 3 (VET-109): Classroom 3 — Dynamic Planet',
       'Continuous Operations: Catering, medical standby, score submissions and verification'
     ]
   },
@@ -451,9 +414,9 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Division C Competition Ends & Security Sweep',
     division: 'C',
     type: 'dismissal',
-    location: 'Hall NAT-H2',
+    location: 'Command Center (VET-103)',
     details: [
-      'Assemble at NAT-H2, return materials, collection of badges, bus boarding under usher guidance',
+      'Assemble at VET-103, return materials, collection of badges, bus boarding under usher guidance',
       'Secure: Labs locked, equipment inventoried, final scores compiled, tie-breakers verified in room VET-104'
     ]
   },
@@ -475,7 +438,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Ceremony Setup & Prize Verification',
     division: 'Both',
     type: 'prep',
-    location: 'Hall NAT-H1',
+    location: 'Command Center (VET-103)',
     details: [
       'Dignitary area setup: Stage, podium, backdrop, banners, seating arrangements for VIPs and media',
       'Prize Audit: Trophies, medals, and certificates verified and ordered by category on table'
@@ -487,7 +450,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Staff, Security & Media Placements',
     division: 'Both',
     type: 'prep',
-    location: 'Hall NAT-H1 & Parking Lot B',
+    location: 'VET-103 & Parking Lot B',
     details: [
       'Volunteer briefings: Usings, VIP escorts, backstage cue, security guards on gate duty',
       'Media desk: Press kits, cameras, tripods set, live stream links initialized'
@@ -499,10 +462,10 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Arrivals & Registration',
     division: 'Both',
     type: 'prep',
-    location: 'Hall NAT-H1 & NAT-404',
+    location: 'VET-103 & Room VET-106',
     details: [
-      'Schools arrive and ushered to designated school rows in Hall NAT-H1',
-      'VIPs arrive, escorted to VIP Meeting Room (NAT-404) for tea and program briefings'
+      'Schools arrive and ushered to designated school rows in Command Center (VET-103)',
+      'VIPs arrive, escorted to VIP Meeting Room (VET-106) for tea and program briefings'
     ]
   },
   {
@@ -511,10 +474,10 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Closing Ceremony & Prize Giving',
     division: 'Both',
     type: 'ceremony',
-    location: 'Hall NAT-H1',
+    location: 'Command Center (VET-103)',
     details: [
       'Opening (10:00-10:30): Processional music, MC welcome, prayer, anthem, dignitaries introduction, VC speech',
-      'Keynote (10:30-10:45): Guest speaker address & interactive Q&A',
+      'Keynote (10:30-10:45): Guest speaker address & Q&A',
       'Highlights (10:45-11:00): Video montage of Day 1, Event Director remarks, sponsors recognition',
       'Prize Distribution (11:00-11:45): Trophy & medals for 3rd, 2nd, 1st for Division B then Division C. Individual certificates',
       'Closing (11:45-12:00): Overall champions announced, vote of thanks, closing prayer, recessional'
@@ -526,7 +489,7 @@ export const TIMELINE_EVENTS: ScheduleEvent[] = [
     title: 'Post-Ceremony Media & Photos',
     division: 'Both',
     type: 'other',
-    location: 'Hall NAT-H1',
+    location: 'Command Center (VET-103)',
     details: [
       'Photo sessions with trophies, media interviews, certificate pickups, and school dismissal'
     ]
@@ -665,8 +628,7 @@ export const CONTACT_LIST: ContactItem[] = [
   { role: 'Ambulance', number: '112' },
   { role: 'Event Director', number: '+234 703 555 1212' },
   { role: 'Volunteer Coordinator', number: '+234 812 777 8888' },
-  { role: 'Venue Manager (Vet)', number: '+234 802 444 5555' },
-  { role: 'Venue Manager (Nat Sci)', number: '+234 816 666 7777' }
+  { role: 'Venue Manager (Vet)', number: '+234 802 444 5555' }
 ];
 
 export const EMERGENCY_PROTOCOLS = [

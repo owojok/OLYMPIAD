@@ -12,20 +12,20 @@ export interface RegisteredVolunteer {
 }
 
 export const INITIAL_REGISTERED_VOLUNTEERS: RegisteredVolunteer[] = [
-  { id: 'reg-init-1', fullName: 'Isreal Awolusi', phone: '08109001253', email: 'isreal.awolusi@gmail.com', timestamp: '06/19/2026 11:45 AM', assignedTeam: 'Registration Team', assignedEventB: 'VET-101', assignedEventC: 'VET-102' },
-  { id: 'reg-init-2', fullName: 'Iliya David Gideon', phone: '08138466049', email: 'gideon.david@gmail.com', timestamp: '06/19/2026 11:45 AM', assignedTeam: 'Registration Team', assignedEventB: 'VET-101', assignedEventC: 'VET-102' },
-  { id: 'reg-init-3', fullName: 'Nanchin Isaac Dawam', phone: '09030549833', email: 'dawam.nanchin@gmail.com', timestamp: '06/19/2026 11:45 AM', assignedTeam: 'Competition Judges Assistant', assignedEventB: 'VET-201', assignedEventC: 'VET-203' },
-  { id: 'reg-init-4', fullName: 'DANJUMA RICHARD', phone: '08101437988', email: 'richard.danjuma@gmail.com', timestamp: '06/19/2026 11:45 AM', assignedTeam: 'Ushers & Guides', assignedEventB: 'NAT-H1', assignedEventC: 'NAT-H2' },
-  { id: 'reg-init-5', fullName: 'Musa G Yohanna', phone: '09032943213', email: 'yohanna.musa@gmail.com', timestamp: '06/19/2026 11:45 AM', assignedTeam: 'Ushers & Guides', assignedEventB: 'NAT-H1', assignedEventC: 'NAT-H2' },
-  { id: 'reg-init-6', fullName: 'Nonyerem Agatha Asadu', phone: '08067248861', email: 'nonyerem.asadu@gmail.com', timestamp: '06/19/2026 11:55 AM', assignedTeam: 'Catering & Refreshment', assignedEventB: 'NAT-102', assignedEventC: 'NAT-102' },
-  { id: 'reg-init-7', fullName: 'Grace Ochanya Agene', phone: '09069208659', email: 'grace.agene@gmail.com', timestamp: '06/19/2026 11:55 AM', assignedTeam: 'Catering & Refreshment', assignedEventB: 'NAT-102', assignedEventC: 'NAT-102' },
+  { id: 'reg-init-1', fullName: 'Isreal Awolusi', phone: '08109001253', email: 'isreal.awolusi@gmail.com', timestamp: '06/19/2026 11:45 AM', assignedTeam: 'Registration Team', assignedEventB: 'VET-109', assignedEventC: 'VET-109' },
+  { id: 'reg-init-2', fullName: 'Patience Mark', phone: '08031112222', email: 'patience.mark@gmail.com', timestamp: '06/19/2026 11:45 AM', assignedTeam: 'Registration Team', assignedEventB: 'VET-109', assignedEventC: 'VET-109' },
+  { id: 'reg-init-3', fullName: 'Nanchin Isaac Dawam', phone: '09030549833', email: 'dawam.nanchin@gmail.com', timestamp: '06/19/2026 11:45 AM', assignedTeam: 'Lab Assistants', assignedEventB: 'VET-201', assignedEventC: 'VET-203' },
+  { id: 'reg-init-4', fullName: 'DANJUMA RICHARD', phone: '08101437988', email: 'richard.danjuma@gmail.com', timestamp: '06/19/2026 11:45 AM', assignedTeam: 'Lab Assistants', assignedEventB: 'VET-201', assignedEventC: 'VET-203' },
+  { id: 'reg-init-5', fullName: 'Musa G Yohanna', phone: '09032943213', email: 'yohanna.musa@gmail.com', timestamp: '06/19/2026 11:45 AM', assignedTeam: 'Lab Assistants', assignedEventB: 'VET-202', assignedEventC: 'VET-301' },
+  { id: 'reg-init-6', fullName: 'Nonyerem Agatha Asadu', phone: '08067248861', email: 'nonyerem.asadu@gmail.com', timestamp: '06/19/2026 11:55 AM', assignedTeam: 'Registration Team', assignedEventB: 'VET-108', assignedEventC: 'VET-102' },
+  { id: 'reg-init-7', fullName: 'Grace Ochanya Agene', phone: '09069208659', email: 'grace.agene@gmail.com', timestamp: '06/19/2026 11:55 AM', assignedTeam: 'Registration Team', assignedEventB: 'VET-108', assignedEventC: 'VET-102' },
   { id: 'reg-init-8', fullName: 'Wisdom Chijioke Chidera', phone: '08123332173', email: 'wisdom.chidera@gmail.com', timestamp: '06/19/2026 12:45 PM', assignedTeam: 'Lab Assistants', assignedEventB: 'VET-202', assignedEventC: 'VET-301' },
-  { id: 'reg-init-9', fullName: 'Maleka Bitrus', phone: '0813 605 3551', email: 'bitrus.maleka@gmail.com', timestamp: '06/19/2026 12:45 PM', assignedTeam: 'Competition Judges Assistant', assignedEventB: 'NAT-201', assignedEventC: 'VET-203' },
-  { id: 'reg-init-10', fullName: 'Bwefuk Isaac Wang', phone: '07065486696', email: 'bwefuk.wang@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'Competition Judges Assistant', assignedEventB: 'NAT-202', assignedEventC: 'NAT-203' },
-  { id: 'reg-init-11', fullName: 'Esther Enuwa Eyimonye', phone: '07063776975', email: 'esther.eyimonye@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'Competition Judges Assistant', assignedEventB: 'NAT-301', assignedEventC: 'NAT-204' },
-  { id: 'reg-init-12', fullName: 'John Meshach Moses', phone: '08085275586', email: 'john.moses@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'Command Center', assignedEventB: 'VET-103', assignedEventC: 'NAT-303' },
-  { id: 'reg-init-13', fullName: 'Winifred Ojima Zakari', phone: '08115306430', email: 'winifred.zakari@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'First Aid Support', assignedEventB: 'NAT-302', assignedEventC: 'NAT-402' },
-  { id: 'reg-init-14', fullName: 'Abdulsalam Adesina Ayoade', phone: '08077662984', email: 'abdulsalam.ayoade@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'Security Assistants', assignedEventB: 'NAT-401', assignedEventC: 'NAT-103' }
+  { id: 'reg-init-9', fullName: 'Maleka Bitrus', phone: '0813 605 3551', email: 'bitrus.maleka@gmail.com', timestamp: '06/19/2026 12:45 PM', assignedTeam: 'Lab Assistants', assignedEventB: 'VET-302', assignedEventC: 'VET-302' },
+  { id: 'reg-init-10', fullName: 'Bwefuk Isaac Wang', phone: '07065486696', email: 'bwefuk.wang@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'Lab Assistants', assignedEventB: 'VET-302', assignedEventC: 'VET-302' },
+  { id: 'reg-init-11', fullName: 'Esther Enuwa Eyimonye', phone: '07063776975', email: 'esther.eyimonye@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'Lab Assistants', assignedEventB: 'VET-303', assignedEventC: 'VET-303' },
+  { id: 'reg-init-12', fullName: 'John Meshach Moses', phone: '08085275586', email: 'john.moses@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'Lab Assistants', assignedEventB: 'VET-303', assignedEventC: 'VET-303' },
+  { id: 'reg-init-13', fullName: 'Winifred Ojima Zakari', phone: '08115306430', email: 'winifred.zakari@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'Ushers & Guides', assignedEventB: 'VET-107', assignedEventC: 'VET-107' },
+  { id: 'reg-init-14', fullName: 'Abdulsalam Adesina Ayoade', phone: '08077662984', email: 'abdulsalam.ayoade@gmail.com', timestamp: '06/20/2026 03:20 PM', assignedTeam: 'Ushers & Guides', assignedEventB: 'VET-107', assignedEventC: 'VET-107' }
 ];
 
 export const useVolunteerRegistration = () => {
@@ -37,17 +37,32 @@ export const useVolunteerRegistration = () => {
       const stored = localStorage.getItem('so_registered_volunteers');
       if (stored) {
         const parsed = JSON.parse(stored) as RegisteredVolunteer[];
-        // Trigger migration if old single-event schema or unallocated default entries exist
-        const needsAssignmentMigration = INITIAL_REGISTERED_VOLUNTEERS.some(
+        // Trigger migration if Iliya or Agnes is present as a volunteer, if NAT- events exist, or if unallocated default entries exist
+        const hasAgnesAsVolunteer = parsed.some(vol => vol.fullName.toLowerCase() === 'agnes longshal');
+        const hasIliyaAsVolunteer = parsed.some(vol => vol.fullName.toLowerCase() === 'iliya david gideon');
+        const hasLegacyNatEvent = parsed.some(
+          (vol) => (vol.assignedEventB?.startsWith('NAT-') || vol.assignedEventC?.startsWith('NAT-'))
+        );
+        const needsAssignmentMigration = hasAgnesAsVolunteer || hasIliyaAsVolunteer || hasLegacyNatEvent || INITIAL_REGISTERED_VOLUNTEERS.some(
           (init) => {
             const match = parsed.find((vol) => vol.fullName.toLowerCase() === init.fullName.toLowerCase() || vol.phone === init.phone);
-            return match && (!match.assignedEventB || !match.assignedEventC);
+            return match && (!match.assignedEventB || !match.assignedEventC || match.assignedTeam !== init.assignedTeam);
           }
         );
 
         if (needsAssignmentMigration) {
-          // Refresh default entries to enforce lab staffing coverage (retaining custom registrations)
-          const customSignups = parsed.filter(vol => !vol.id.startsWith('reg-init-'));
+          // Remove Iliya and Agnes, rewrite default entries, and clean up NAT events for custom signups
+          const filteredParsed = parsed.filter(vol => {
+            const name = vol.fullName.toLowerCase();
+            return name !== 'iliya david gideon' && name !== 'agnes longshal';
+          });
+          const customSignups = filteredParsed.filter(vol => !vol.id.startsWith('reg-init-')).map(vol => {
+            return {
+              ...vol,
+              assignedEventB: vol.assignedEventB?.startsWith('NAT-') ? 'VET-103' : vol.assignedEventB,
+              assignedEventC: vol.assignedEventC?.startsWith('NAT-') ? 'VET-103' : vol.assignedEventC
+            };
+          });
           const migrated = [...INITIAL_REGISTERED_VOLUNTEERS, ...customSignups];
           setRegisteredVolunteers(migrated);
           localStorage.setItem('so_registered_volunteers', JSON.stringify(migrated));

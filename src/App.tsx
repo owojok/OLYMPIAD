@@ -1,3 +1,9 @@
+/**
+ * Justification: This file serves as the main application shell coordinating global layout,
+ * routing, sidebar/topbar toggle states, and the global search indexing across all features.
+ * Because it aggregates and mounts all feature dashboards, it exceeds 250 lines.
+ */
+
 import { useState, useEffect, useRef } from 'react';
 import { 
   Layout, 
@@ -105,95 +111,136 @@ function App() {
     const results: SearchResult[] = [];
 
     // 1. Search Timeline Events
-    TIMELINE_EVENTS.forEach(event => {
-      if (event.title.toLowerCase().includes(query) || event.location.toLowerCase().includes(query)) {
-        results.push({
-          category: 'Schedule',
-          title: event.title,
-          subtitle: `${event.time.split(' (')[0]} · ${event.location}`,
-          tab: 'schedule'
-        });
-      }
-    });
+    if (Array.isArray(TIMELINE_EVENTS)) {
+      TIMELINE_EVENTS.forEach(event => {
+        if (!event) return;
+        const title = event.title || '';
+        const location = event.location || '';
+        const time = event.time || '';
+        if (title.toLowerCase().includes(query) || location.toLowerCase().includes(query)) {
+          results.push({
+            category: 'Schedule',
+            title,
+            subtitle: `${time.split(' (')[0]} · ${location}`,
+            tab: 'schedule'
+          });
+        }
+      });
+    }
 
     // 2. Search Rooms / Venues
-    const activeSearchVenues = venueHook.venues.length > 0 ? venueHook.venues : VENUE_DATA;
-    activeSearchVenues.forEach(faculty => {
-      faculty.floors.forEach(floor => {
-        floor.rooms.forEach(room => {
-          if (room.name.toLowerCase().includes(query) || room.id.toLowerCase().includes(query) || room.allocation.toLowerCase().includes(query)) {
+    const activeSearchVenues = venueHook.venues && venueHook.venues.length > 0 ? venueHook.venues : VENUE_DATA;
+    if (Array.isArray(activeSearchVenues)) {
+      activeSearchVenues.forEach(faculty => {
+        if (!faculty || !Array.isArray(faculty.floors)) return;
+        faculty.floors.forEach(floor => {
+          if (!floor || !Array.isArray(floor.rooms)) return;
+          floor.rooms.forEach(room => {
+            if (!room) return;
+            const name = room.name || '';
+            const id = room.id || '';
+            const allocation = room.allocation || '';
+            if (name.toLowerCase().includes(query) || id.toLowerCase().includes(query) || allocation.toLowerCase().includes(query)) {
+              results.push({
+                category: 'Venue',
+                title: `${id}: ${name}`.trim(),
+                subtitle: `${faculty.name || ''} · ${allocation}`.trim(),
+                tab: 'venues'
+              });
+            }
+          });
+        });
+      });
+    }
+
+    // 3. Search Checklists
+    if (MATERIAL_CHECKLISTS && typeof MATERIAL_CHECKLISTS === 'object') {
+      Object.entries(MATERIAL_CHECKLISTS).forEach(([cat, items]) => {
+        if (!Array.isArray(items)) return;
+        items.forEach(item => {
+          if (item && item.toLowerCase().includes(query)) {
             results.push({
-              category: 'Venue',
-              title: `${room.id}: ${room.name}`,
-              subtitle: `${faculty.name} · ${room.allocation}`,
-              tab: 'venues'
+              category: 'Checklist',
+              title: item,
+              subtitle: `In ${cat} Materials`,
+              tab: 'checklists'
             });
           }
         });
       });
-    });
+    }
 
-    // 3. Search Checklists
-    Object.entries(MATERIAL_CHECKLISTS).forEach(([cat, items]) => {
-      items.forEach(item => {
-        if (item.toLowerCase().includes(query)) {
+    // 4. Search Emergency Contacts
+    if (Array.isArray(CONTACT_LIST)) {
+      CONTACT_LIST.forEach(contact => {
+        if (!contact) return;
+        const role = contact.role || '';
+        const number = contact.number || '';
+        if (role.toLowerCase().includes(query) || number.includes(query)) {
           results.push({
-            category: 'Checklist',
-            title: item,
-            subtitle: `In ${cat} Materials`,
-            tab: 'checklists'
+            category: 'Contact',
+            title: role,
+            subtitle: number,
+            tab: 'emergency'
           });
         }
       });
-    });
-
-    // 4. Search Emergency Contacts
-    CONTACT_LIST.forEach(contact => {
-      if (contact.role.toLowerCase().includes(query) || contact.number.includes(query)) {
-        results.push({
-          category: 'Contact',
-          title: contact.role,
-          subtitle: contact.number,
-          tab: 'emergency'
-        });
-      }
-    });
+    }
 
     // 5. Search Participating Schools
-    PARTICIPATING_SCHOOLS.forEach(school => {
-      if (school.name.toLowerCase().includes(query)) {
-        results.push({
-          category: 'School',
-          title: school.name,
-          subtitle: `Division ${school.division} Participating School`,
-          tab: 'schools'
-        });
-      }
-    });
+    if (Array.isArray(PARTICIPATING_SCHOOLS)) {
+      PARTICIPATING_SCHOOLS.forEach(school => {
+        if (!school) return;
+        const name = school.name || '';
+        if (name.toLowerCase().includes(query)) {
+          results.push({
+            category: 'School',
+            title: name,
+            subtitle: `Division ${school.division || ''} Participating School`,
+            tab: 'schools'
+          });
+        }
+      });
+    }
 
     // 6. Search Judges
-    judgeHook.judges.forEach(judge => {
-      if (judge.name.toLowerCase().includes(query) || judge.assignedEvent.toLowerCase().includes(query)) {
-        results.push({
-          category: 'Judge',
-          title: judge.name,
-          subtitle: `Assigned: ${judge.assignedEvent}`,
-          tab: 'judges'
-        });
-      }
-    });
+    if (judgeHook.judges && Array.isArray(judgeHook.judges)) {
+      judgeHook.judges.forEach(judge => {
+        if (!judge) return;
+        const name = judge.name || '';
+        const assignedEvent = judge.assignedEvent || '';
+        if (name.toLowerCase().includes(query) || assignedEvent.toLowerCase().includes(query)) {
+          results.push({
+            category: 'Judge',
+            title: name,
+            subtitle: `Assigned: ${assignedEvent}`,
+            tab: 'judges'
+          });
+        }
+      });
+    }
 
-    // 7. Search Committee Members
-    committeeHook.members.forEach(member => {
-      if (member.name.toLowerCase().includes(query) || member.assignedTask.toLowerCase().includes(query)) {
-        results.push({
-          category: 'Committee',
-          title: member.name,
-          subtitle: `${member.role} · ${member.assignedTask}`,
-          tab: 'committee'
-        });
-      }
-    });
+    // 7. Search Committee
+    if (committeeHook.members && Array.isArray(committeeHook.members)) {
+      committeeHook.members.forEach(member => {
+        if (!member) return;
+        const name = member.name || '';
+        const assignedTask = member.assignedTask || '';
+        const email = member.email || '';
+        if (
+          name.toLowerCase().includes(query) || 
+          assignedTask.toLowerCase().includes(query) ||
+          email.toLowerCase().includes(query)
+        ) {
+          results.push({
+            category: 'Committee',
+            title: name,
+            subtitle: `${member.role || 'Member'} · ${assignedTask || 'Unassigned'}`,
+            tab: 'committee'
+          });
+        }
+      });
+    }
 
     setSearchResults(results.slice(0, 8)); // Limit to top 8
   }, [globalSearch, judgeHook.judges, venueHook.venues, committeeHook.members]);

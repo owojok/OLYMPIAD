@@ -12,6 +12,30 @@ import {
 } from 'lucide-react';
 import './PlanningCommittee.css';
 
+const MemberAvatar: React.FC<{ 
+  avatar?: string; 
+  name: string; 
+  isLead: boolean; 
+  isSubLead: boolean; 
+}> = ({ avatar, name, isLead, isSubLead }) => {
+  const [hasError, setHasError] = useState(false);
+
+  return (
+    <div className={`member-avatar ${isLead ? 'lead' : isSubLead ? 'sublead' : ''}`}>
+      {avatar && !hasError ? (
+        <img 
+          src={avatar} 
+          alt={name} 
+          className="member-avatar-img"
+          onError={() => setHasError(true)}
+        />
+      ) : (
+        isLead ? <Award size={18} /> : isSubLead ? <UserCheck size={18} /> : <Users size={16} />
+      )}
+    </div>
+  );
+};
+
 interface PlanningCommitteeViewProps {
   committeeHook: ReturnType<typeof useCommittee>;
 }
@@ -28,9 +52,9 @@ export const PlanningCommitteeView: React.FC<PlanningCommitteeViewProps> = ({ co
       return (
         member.name.toLowerCase().includes(query) ||
         member.role.toLowerCase().includes(query) ||
-        member.assignedTask.toLowerCase().includes(query)
-      );
-    });
+        member.assignedTask.toLowerCase().includes(query) ||
+        (member.email ? member.email.toLowerCase().includes(query) : false)
+      );    });
   }, [members, searchQuery]);
 
   return (
@@ -99,9 +123,12 @@ export const PlanningCommitteeView: React.FC<PlanningCommitteeViewProps> = ({ co
                   >
                     <div className="member-info-row">
                       <div className="member-avatar-col">
-                        <div className={`member-avatar ${isLead ? 'lead' : isSubLead ? 'sublead' : ''}`}>
-                          {isLead ? <Award size={18} /> : isSubLead ? <UserCheck size={18} /> : <Users size={16} />}
-                        </div>
+                        <MemberAvatar 
+                          avatar={member.avatar} 
+                          name={member.name} 
+                          isLead={isLead} 
+                          isSubLead={isSubLead} 
+                        />
                       </div>
                       
                       <div className="member-details-col">
@@ -111,6 +138,11 @@ export const PlanningCommitteeView: React.FC<PlanningCommitteeViewProps> = ({ co
                             {member.role}
                           </span>
                         </div>
+                        {member.email && (
+                          <span className="member-email" title={member.email}>
+                            {member.email}
+                          </span>
+                        )}
                         
                         <div className="task-selector-wrapper" style={{ marginTop: 12 }}>
                           <label htmlFor={`task-select-${member.id}`} className="task-label">
@@ -151,7 +183,7 @@ export const PlanningCommitteeView: React.FC<PlanningCommitteeViewProps> = ({ co
                 <div style={{ fontSize: '0.85rem' }}>
                   <strong>Leadership Hierarchy:</strong>
                   <p style={{ marginTop: 4 }}>
-                    <strong>Prof. Sarah Benjamin Lwahas</strong> is the overall lead for all planning operations. All operational reports and escalations should channel through <strong>Naomi Embaga</strong> (Sub-lead).
+                    <strong>Prof. Sarah Lawhas</strong> is the overall lead for all planning operations. All operational reports and escalations should channel through <strong>Naomi Embaga</strong> (Sub-lead).
                   </p>
                 </div>
               </div>
